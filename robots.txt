@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dominio.com/sitemap.xml
+Sitemap: https://www.magnaniup.com/sitemap.xml
+
