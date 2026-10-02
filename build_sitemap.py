@@ -5,89 +5,89 @@ from datetime import datetime
 URL_GROUPS = [
     # 2.5 Service: Criação de Sites
     (
-        "https://dominio.com/pt/servicos/criacao-de-sites/",
-        "https://dominio.com/br/servicos/criacao-de-sites/",
-        "https://dominio.com/it/servizi/creazione-siti-web/",
+        "https://www.magnaniup.com/pt/servicos/criacao-de-sites/",
+        "https://www.magnaniup.com/br/servicos/criacao-de-sites/",
+        "https://www.magnaniup.com/it/servizi/creazione-siti-web/",
         "0.9",
         "weekly"
     ),
     # 1. Home
     (
-        "https://dominio.com/pt/",
-        "https://dominio.com/br/",
-        "https://dominio.com/it/",
+        "https://www.magnaniup.com/pt/",
+        "https://www.magnaniup.com/br/",
+        "https://www.magnaniup.com/it/",
         "1.0",
         "weekly"
     ),
     # 2. Service Hubs
     (
-        "https://dominio.com/pt/servicos/",
-        "https://dominio.com/br/servicos/",
-        "https://dominio.com/it/servizi/",
+        "https://www.magnaniup.com/pt/servicos/",
+        "https://www.magnaniup.com/br/servicos/",
+        "https://www.magnaniup.com/it/servizi/",
         "0.9",
         "monthly"
     ),
     # 3. Service: SEO
     (
-        "https://dominio.com/pt/servicos/seo/",
-        "https://dominio.com/br/servicos/seo/",
-        "https://dominio.com/it/servizi/seo/",
+        "https://www.magnaniup.com/pt/servicos/seo/",
+        "https://www.magnaniup.com/br/servicos/seo/",
+        "https://www.magnaniup.com/it/servizi/seo/",
         "0.85",
         "monthly"
     ),
     # 4. Service: Landing Pages
     (
-        "https://dominio.com/pt/servicos/landing-pages/",
-        "https://dominio.com/br/servicos/landing-pages/",
-        "https://dominio.com/it/servizi/landing-page/",
+        "https://www.magnaniup.com/pt/servicos/landing-pages/",
+        "https://www.magnaniup.com/br/servicos/landing-pages/",
+        "https://www.magnaniup.com/it/servizi/landing-page/",
         "0.85",
         "monthly"
     ),
     # 5. Service: Tráfego Pago
     (
-        "https://dominio.com/pt/servicos/trafego-pago/",
-        "https://dominio.com/br/servicos/trafego-pago/",
-        "https://dominio.com/it/servizi/traffico-a-pagamento/",
+        "https://www.magnaniup.com/pt/servicos/trafego-pago/",
+        "https://www.magnaniup.com/br/servicos/trafego-pago/",
+        "https://www.magnaniup.com/it/servizi/traffico-a-pagamento/",
         "0.85",
         "monthly"
     ),
     # 6. Service: Sistemas
     (
-        "https://dominio.com/pt/servicos/sistemas/",
-        "https://dominio.com/br/servicos/sistemas/",
-        "https://dominio.com/it/servizi/sistemi/",
+        "https://www.magnaniup.com/pt/servicos/sistemas/",
+        "https://www.magnaniup.com/br/servicos/sistemas/",
+        "https://www.magnaniup.com/it/servizi/sistemi/",
         "0.85",
         "monthly"
     ),
     # 7. Service: Google Meu Negócio / Business Profile
     (
-        "https://dominio.com/pt/servicos/google-meu-negocio/",
-        "https://dominio.com/br/servicos/google-meu-negocio/",
-        "https://dominio.com/it/servizi/google-business-profile/",
+        "https://www.magnaniup.com/pt/servicos/google-meu-negocio/",
+        "https://www.magnaniup.com/br/servicos/google-meu-negocio/",
+        "https://www.magnaniup.com/it/servizi/google-business-profile/",
         "0.85",
         "monthly"
     ),
     # 8. Sobre / Chi Siamo
     (
-        "https://dominio.com/pt/sobre/",
-        "https://dominio.com/br/sobre/",
-        "https://dominio.com/it/chi-siamo/",
+        "https://www.magnaniup.com/pt/sobre/",
+        "https://www.magnaniup.com/br/sobre/",
+        "https://www.magnaniup.com/it/chi-siamo/",
         "0.7",
         "monthly"
     ),
     # 9. FAQ
     (
-        "https://dominio.com/pt/faq/",
-        "https://dominio.com/br/faq/",
-        "https://dominio.com/it/faq/",
+        "https://www.magnaniup.com/pt/faq/",
+        "https://www.magnaniup.com/br/faq/",
+        "https://www.magnaniup.com/it/faq/",
         "0.7",
         "monthly"
     ),
     # 10. Contacto / Contato / Contatti
     (
-        "https://dominio.com/pt/contacto/",
-        "https://dominio.com/br/contato/",
-        "https://dominio.com/it/contatti/",
+        "https://www.magnaniup.com/pt/contacto/",
+        "https://www.magnaniup.com/br/contato/",
+        "https://www.magnaniup.com/it/contatti/",
         "0.8",
         "monthly"
     )
