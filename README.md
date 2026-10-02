@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Magnani UP® - Website Institucional Multirregional
 
 Website institucional desenvolvido para a agência **Magnani UP®**, com foco em criação de websites de alta conversão, performance e serviços digitais.
@@ -53,3 +54,6 @@ magnani-up/
 
 ## 🎯 Etapa Atual: Header / Menu
 Nesta etapa, apenas o **Header** foi implementado, mantendo fidelidade visual absoluta ao mockup original e preparando o alicerce para as seções seguintes.
+=======
+# Magnani-UP
+>>>>>>> 7dc8114d339dd4ea646e41616283eb0563f97a83
