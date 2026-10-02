@@ -1,0 +1,100 @@
+/**
+ * Magnani UP® - Design Tokens & Variables
+ * Cores, tipografia, espaçamentos e transições fiéis ao mockup
+ */
+
+:root {
+  /* ==========================================================================
+     Paleta de Cores (Fiel ao Mockup)
+     ========================================================================== */
+  
+  /* Fundos */
+  --color-bg-base: #060919;               /* Fundo azul-marinho muito escuro principal */
+  --color-bg-surface: #0a0f2e;            /* Superfície escura */
+  --color-bg-elevated: #101642;           /* Superfície elevada para cards/dropdowns */
+  --color-bg-header-scrolled: rgba(6, 9, 25, 0.92); /* Fundo com blur ao rolar */
+
+  /* Acentos de Iluminação de Fundo */
+  --color-glow-blue: #182a7a;             /* Azul profundo brilhante */
+  --color-glow-purple: #3b1e82;           /* Roxo/violeta do gradiente */
+  --color-glow-violet: #6b21a8;           /* Violeta de acento */
+
+  /* Marca - Laranja Magnani UP® */
+  --color-accent-orange: #f5711a;         /* Laranja vibrante oficial (rgb: 245, 113, 26) */
+  --color-accent-orange-hover: #ff7f2e;   /* Laranja levemente iluminado para hover */
+  --color-accent-orange-active: #e25e07;  /* Laranja pressionado */
+  --color-accent-orange-glow: rgba(245, 113, 26, 0.38);
+
+  /* Marca - Roxo & Violeta Neon */
+  --color-accent-purple: #8b5cf6;         /* Roxo do símbolo da logo */
+  --color-accent-purple-light: #a78bfa;   /* Roxo claro */
+  --color-accent-purple-dark: #6d28d9;    /* Roxo profundo */
+
+  /* Tipografia & Textos */
+  --color-text-primary: #ffffff;          /* Branco puro */
+  --color-text-nav: rgba(255, 255, 255, 0.80); /* Branco suave para links inativos */
+  --color-text-nav-hover: #ffffff;        /* Branco puro no hover */
+  --color-text-muted: rgba(255, 255, 255, 0.60);
+
+  /* Bordas & Divisores */
+  --color-border-subtle: rgba(255, 255, 255, 0.08);
+  --color-border-hover: rgba(255, 255, 255, 0.18);
+  --color-border-active: var(--color-accent-orange);
+
+  /* Foco Acessível (WCAG AA/AAA) */
+  --color-focus-ring: #8b5cf6;
+  --focus-outline: 2px solid var(--color-focus-ring);
+  --focus-outline-offset: 3px;
+
+  /* ==========================================================================
+     Tipografia (Google Font: Plus Jakarta Sans)
+     ========================================================================== */
+  --font-family-base: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  
+  --font-size-xs: 0.75rem;     /* 12px */
+  --font-size-sm: 0.875rem;    /* 14px */
+  --font-size-nav: 0.9375rem;  /* 15px - Tamanho ideal do menu no desktop */
+  --font-size-btn: 0.9375rem;  /* 15px - Botão CTA */
+  --font-size-base: 1rem;      /* 16px */
+  --font-size-lg: 1.125rem;    /* 18px */
+  --font-size-logo: 1.28rem;   /* ~20.5px */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  --letter-spacing-nav: -0.01em;
+  --letter-spacing-btn: -0.01em;
+  --letter-spacing-logo: -0.02em;
+
+  /* ==========================================================================
+     Dimensões & Espaçamentos do Header
+     ========================================================================== */
+  --header-height-desktop: 82px;
+  --header-height-tablet: 74px;
+  --header-height-mobile: 68px;
+
+  --container-max-width: 1280px;
+  --container-padding-desktop: 40px;
+  --container-padding-tablet: 24px;
+  --container-padding-mobile: 20px;
+
+  --nav-gap-desktop: 34px;
+  --nav-gap-tablet: 24px;
+
+  /* ==========================================================================
+     Transições & Efeitos
+     ========================================================================== */
+  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+  --shadow-btn-orange: 0 4px 18px var(--color-accent-orange-glow);
+  --shadow-btn-orange-hover: 0 6px 24px rgba(245, 113, 26, 0.52);
+
+  --z-header: 1000;
+  --z-drawer: 1010;
+  --z-overlay: 1005;
+}

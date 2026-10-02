@@ -1,0 +1,41 @@
+/**
+ * Magnani UP® - Main Stylesheet
+ * Atmosfera de fundo fiel ao mockup e base limpa
+ */
+
+@import url('./variables.css');
+@import url('./reset.css');
+@import url('./header.css');
+
+.page-wrapper {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--color-bg-base);
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle 800px at 85% 15%, rgba(46, 27, 105, 0.45) 0%, rgba(25, 37, 105, 0.25) 45%, transparent 75%),
+    radial-gradient(ellipse 900px 500px at 70% 8%, rgba(24, 42, 122, 0.4) 0%, transparent 70%),
+    linear-gradient(180deg, #060919 0%, #080d26 50%, #050716 100%);
+  background-attachment: fixed;
+}
+
+.page-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 450px;
+  background: radial-gradient(circle at 80% 0%, rgba(139, 92, 246, 0.15), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Área limpa reservada para as próximas seções (Hero, etc.) */
+.main-content-stage {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}

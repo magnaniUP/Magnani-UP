@@ -1,0 +1,130 @@
+<!-- ====================================================================
+     COMPONENTE MODULAR: FOOTER MAGNANI UP® (ONPAGE ANCHORS)
+     Reutilizável nas versões: /pt/, /br/, /it/
+     ==================================================================== -->
+<footer class="site-footer" id="site-footer" aria-label="Rodapé do site">
+  <div class="footer-container">
+    
+    <!-- Grid Principal de 4 Colunas -->
+    <div class="footer-main-grid">
+      
+      <!-- Coluna 1 — Marca -->
+      <div class="footer-brand-col">
+        <a href="{{HOME_ANCHOR}}" class="brand-logo footer-brand-logo" aria-label="Magnani UP®">
+          <span class="brand-logo-content">
+            <svg class="brand-symbol-svg" viewBox="0 0 56 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <defs>
+                <linearGradient id="{{GRAD_ID_FOOTER_M}}" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#7045f5"/>
+                  <stop offset="50%" stop-color="#8b5cf6"/>
+                  <stop offset="100%" stop-color="#a78bfa"/>
+                </linearGradient>
+                <linearGradient id="{{GRAD_ID_FOOTER_UP}}" x1="0%" y1="100%" x2="0%" y2="0%">
+                  <stop offset="0%" stop-color="#ffffff"/>
+                  <stop offset="70%" stop-color="#ffffff"/>
+                  <stop offset="100%" stop-color="#ede9fe"/>
+                </linearGradient>
+              </defs>
+              <path d="M 4 29 L 10.8 9.5 C 11.8 6.8 14.8 6.8 15.8 9.5 L 20 18.5 C 21 20.8 23.8 20.8 24.8 18.5 L 29 9.5 C 30 6.8 33 6.8 34 9.5 L 38.5 20 C 39.2 21.8 41.5 22 42.5 20.5 L 46 14.5" 
+                    stroke="url(#{{GRAD_ID_FOOTER_M}})" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M 33.5 17.5 L 36.8 28.5 C 37.8 31.8 41.8 31.8 42.8 28.5 L 51.5 5.5 C 52 4.2 50.8 3.2 49.2 3.2 L 44 3.2 C 42.2 3.2 41 4.5 40.2 6.2 L 38 11" 
+                    stroke="url(#{{GRAD_ID_FOOTER_UP}})" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="brand-name">
+              <span class="brand-name-main">Magnani</span>
+              <span class="brand-name-up">UP</span>
+              <sup class="brand-registered">®</sup>
+            </span>
+          </span>
+        </a>
+
+        <span class="footer-tagline">{{TAGLINE}}</span>
+
+        <p class="footer-institutional-desc">
+          {{INSTITUTIONAL_DESC}}
+        </p>
+
+        <!-- Redes Sociais Oficiais -->
+        <ul class="footer-social-list" aria-label="Redes sociais">
+          <li>
+            <a href="https://instagram.com" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg class="footer-social-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg class="footer-social-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="2" y="2" width="20" height="20" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="7" cy="7" r="1.8" fill="currentColor"/>
+                <path d="M5.5 10.5H8.5V18.5H5.5V10.5Z" fill="currentColor"/>
+                <path d="M11 10.5H13.8V11.7C14.3 10.8 15.4 10.2 16.7 10.2C19.5 10.2 20 12 20 14.5V18.5H17V14.8C17 13.5 16.6 12.6 15.3 12.6C14 12.6 13.5 13.5 13.5 14.8V18.5H11V10.5Z" fill="currentColor"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="{{HOME_ANCHOR}}" class="footer-social-link" aria-label="Website">
+              <svg class="footer-social-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+                <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 3C14.5 5.5 16 8.5 16 12C16 15.5 14.5 18.5 12 21C9.5 18.5 8 15.5 8 12C8 8.5 9.5 5.5 12 3Z" fill="none" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Coluna 2 — Navegação -->
+      <nav class="footer-col" aria-label="{{NAV_TITLE}}">
+        <h3 class="footer-col-title">{{NAV_TITLE}}</h3>
+        <ul class="footer-links-list">
+          <li><a href="#inicio" class="footer-link">Início</a></li>
+          <li><a href="#servicos" class="footer-link">Serviços</a></li>
+          <li><a href="#sobre" class="footer-link">Sobre</a></li>
+          <li><a href="#faq" class="footer-link">FAQ</a></li>
+          <li><a href="#contato" class="footer-link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <!-- Coluna 3 — Serviços -->
+      <nav class="footer-col" aria-label="{{SERVICES_TITLE}}">
+        <h3 class="footer-col-title">{{SERVICES_TITLE}}</h3>
+        <ul class="footer-links-list">
+          <li><a href="#servicos" class="footer-link">SEO</a></li>
+          <li><a href="#servicos" class="footer-link">Landing Pages</a></li>
+          <li><a href="#servicos" class="footer-link">Tráfego Pago</a></li>
+          <li><a href="#servicos" class="footer-link">Criação de Sistemas</a></li>
+          <li><a href="#servicos" class="footer-link">Google Meu Negócio</a></li>
+        </ul>
+      </nav>
+
+      <!-- Coluna 4 — Contacto -->
+      <div class="footer-col footer-contact-col">
+        <h3 class="footer-col-title">{{CONTACT_TITLE}}</h3>
+        <p class="footer-contact-text">
+          {{CONTACT_TEXT}}
+        </p>
+        <a href="#contato" class="footer-contact-btn">
+          <span>{{CONTACT_BTN_TEXT}} &rarr;</span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Divisor Inferior & Barra Legal -->
+    <div class="footer-bottom-bar">
+      <p class="footer-copyright">
+        {{COPYRIGHT_TEXT}}
+      </p>
+      <div class="footer-legal-links">
+        <a href="{{PRIVACY_URL}}" class="footer-legal-link">{{PRIVACY_TEXT}}</a>
+        <span class="footer-legal-divider" aria-hidden="true"></span>
+        <a href="{{TERMS_URL}}" class="footer-legal-link">{{TERMS_TEXT}}</a>
+      </div>
+    </div>
+
+  </div>
+</footer>

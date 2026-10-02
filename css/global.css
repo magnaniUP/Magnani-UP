@@ -1,0 +1,231 @@
+/**
+ * Magnani UP® - Global Variables & Atmospheric Base
+ * Design Tokens estritamente fiéis ao Mockup
+ */
+
+:root {
+  /* ==========================================================================
+     Paleta de Cores
+     ========================================================================== */
+  --color-bg-base: #060919;               /* Fundo azul-marinho muito escuro principal */
+  --color-bg-surface: #0a0f2e;            /* Superfície escura */
+  --color-bg-elevated: #101642;           /* Superfície elevada */
+  --color-bg-header-scrolled: rgba(6, 9, 25, 0.92); /* Fundo com blur ao rolar */
+
+  /* Acentos de Iluminação de Fundo */
+  --color-glow-blue: #182a7a;             /* Azul profundo brilhante */
+  --color-glow-purple: #3b1e82;           /* Roxo/violeta do gradiente */
+  --color-glow-violet: #6b21a8;           /* Violeta de acento */
+
+  /* Marca - Laranja Magnani UP® */
+  --color-accent-orange: #f5711a;         /* Laranja vibrante oficial (rgb: 245, 113, 26) */
+  --color-accent-orange-hover: #ff7f2e;   /* Laranja iluminado */
+  --color-accent-orange-active: #e25e07;  /* Laranja pressionado */
+  --color-accent-orange-glow: rgba(245, 113, 26, 0.38);
+
+  /* Marca - Roxo & Violeta Neon */
+  --color-accent-purple: #8b5cf6;         /* Roxo do símbolo da logo */
+  --color-accent-purple-light: #a78bfa;   /* Roxo claro */
+  --color-accent-purple-dark: #6d28d9;    /* Roxo profundo */
+
+  /* Tipografia & Textos */
+  --color-text-primary: #ffffff;          /* Branco puro */
+  --color-text-nav: rgba(255, 255, 255, 0.80); /* Branco suave para links inativos */
+  --color-text-nav-hover: #ffffff;        /* Branco puro no hover */
+  --color-text-muted: rgba(255, 255, 255, 0.60);
+
+  /* Bordas & Divisores */
+  --color-border-subtle: rgba(255, 255, 255, 0.08);
+  --color-border-hover: rgba(255, 255, 255, 0.18);
+  --color-border-active: var(--color-accent-orange);
+
+  /* Foco Acessível (WCAG AA/AAA) */
+  --color-focus-ring: #8b5cf6;
+  --focus-outline: 2px solid var(--color-focus-ring);
+  --focus-outline-offset: 3px;
+
+  /* ==========================================================================
+     Tipografia (Google Font: Plus Jakarta Sans)
+     ========================================================================== */
+  --font-family-base: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  
+  --font-size-xs: 0.75rem;     /* 12px */
+  --font-size-sm: 0.875rem;    /* 14px */
+  --font-size-nav: 0.9375rem;  /* 15px - Tamanho ideal do menu no desktop */
+  --font-size-btn: 0.9375rem;  /* 15px - Botão CTA */
+  --font-size-base: 1rem;      /* 16px */
+  --font-size-lg: 1.125rem;    /* 18px */
+  --font-size-logo: 1.28rem;   /* ~20.5px */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  --letter-spacing-nav: -0.01em;
+  --letter-spacing-btn: -0.01em;
+  --letter-spacing-logo: -0.02em;
+
+  /* ==========================================================================
+     Dimensões & Espaçamentos
+     ========================================================================== */
+  --header-height-desktop: 82px;
+  --header-height-tablet: 74px;
+  --header-height-mobile: 68px;
+
+  --container-max-width: 1280px;
+  --container-padding-desktop: 40px;
+  --container-padding-tablet: 24px;
+  --container-padding-mobile: 20px;
+
+  --nav-gap-desktop: 34px;
+  --nav-gap-tablet: 24px;
+
+  /* ==========================================================================
+     Transições & Sombras
+     ========================================================================== */
+  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+  --shadow-btn-orange: 0 4px 18px var(--color-accent-orange-glow);
+  --shadow-btn-orange-hover: 0 6px 24px rgba(245, 113, 26, 0.52);
+
+  --z-header: 1000;
+  --z-drawer: 1010;
+  --z-overlay: 1005;
+}
+
+/* ==========================================================================
+   Atmosfera Visual de Fundo (Mockup Original)
+   ========================================================================== */
+.page-wrapper {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--color-bg-base);
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle 800px at 85% 15%, rgba(46, 27, 105, 0.45) 0%, rgba(25, 37, 105, 0.25) 45%, transparent 75%),
+    radial-gradient(ellipse 900px 500px at 70% 8%, rgba(24, 42, 122, 0.4) 0%, transparent 70%),
+    linear-gradient(180deg, #060919 0%, #080d26 50%, #050716 100%);
+  background-attachment: fixed;
+}
+
+.page-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 450px;
+  background: radial-gradient(circle at 80% 0%, rgba(139, 92, 246, 0.15), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.main-content-stage {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Gateway / Seletor Inicial (Apenas na página raiz de entrada) */
+.gateway-container {
+  max-width: 720px;
+  margin: 140px auto 60px;
+  padding: 40px 32px;
+  background: rgba(16, 22, 68, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.gateway-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background: rgba(245, 113, 26, 0.12);
+  border: 1px solid rgba(245, 113, 26, 0.3);
+  color: var(--color-accent-orange);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.gateway-badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--color-accent-orange);
+  box-shadow: 0 0 8px var(--color-accent-orange);
+}
+
+.gateway-title {
+  font-size: 1.65rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.gateway-text {
+  font-size: 0.95rem;
+  color: var(--color-text-nav);
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.gateway-markets {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.market-card {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 24px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-border-subtle);
+  color: var(--color-text-primary);
+  min-width: 170px;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.market-card:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--color-accent-orange);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.market-card-flag {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.market-card-name {
+  font-weight: var(--font-weight-semibold);
+  font-size: 1rem;
+}
+
+.market-card-code {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}

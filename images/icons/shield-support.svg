@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Classic elegant shield shape -->
+  <path d="M14 3.5L5 7.5V13.5C5 19.2 8.8 24.3 14 25.5C19.2 24.3 23 19.2 23 13.5V7.5L14 3.5Z" stroke="#ffffff" stroke-width="1.9" stroke-linejoin="round"/>
+  <!-- Checkmark inside shield -->
+  <path d="M9.5 14L12.5 17L18.5 11" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" fill="none">
+  <!-- Awning top -->
+  <path d="M4 7H24L22 13H6L4 7Z" stroke="#a78bfa" stroke-width="2" stroke-linejoin="round" fill="#1c2156"/>
+  <path d="M10 7V13" stroke="#a78bfa" stroke-width="1.5"/>
+  <path d="M14 7V13" stroke="#a78bfa" stroke-width="1.5"/>
+  <path d="M18 7V13" stroke="#a78bfa" stroke-width="1.5"/>
+  <!-- Pillars / base -->
+  <path d="M6 13V22H22V13" stroke="#f5711a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Door / center -->
+  <rect x="11.5" y="16" width="5" height="6" stroke="#ffffff" stroke-width="1.6" fill="none"/>
+</svg>

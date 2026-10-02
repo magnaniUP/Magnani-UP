@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" fill="none" stroke="#ffffff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Back wireframe screen -->
+  <rect x="4" y="4" width="15" height="12" rx="2.5" stroke="#a78bfa" stroke-width="1.7" opacity="0.75"/>
+  <!-- Front wireframe screen -->
+  <rect x="9" y="9" width="15" height="15" rx="2.5" stroke="#ffffff" stroke-width="1.9" fill="#161e56"/>
+  <line x1="9" y1="14" x2="24" y2="14" stroke="#a78bfa" stroke-width="1.5"/>
+  <rect x="12" y="16.5" width="4.5" height="4.5" rx="1" stroke="#ffffff" stroke-width="1.3"/>
+  <line x1="19" y1="17" x2="22" y2="17" stroke="#ffffff" stroke-width="1.3"/>
+  <line x1="19" y1="20" x2="22" y2="20" stroke="#ffffff" stroke-width="1.3"/>
+</svg>

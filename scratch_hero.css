@@ -1,0 +1,411 @@
+/* ==========================================================================
+   MAGNANI UP® — HERO SECTION CSS (css/hero.css)
+   Fidelidade Visual Absoluta ao Mockup Magnani UP®
+   Correções Aplicadas:
+   1. Imagem do notebook + smartphone em alta resolução (4K), ultra nítida
+   2. Fundo 100% transparente na imagem — zero retângulo ou caixa visual
+   3. Background da Hero contínuo, unificado com iluminação violeta/âmbar
+   4. "AGÊNCIA DIGITAL" posicionado corretamente ABAIXO do Header
+   5. Espaçamento vertical ideal entre Header e Hero (sem sobreposição)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Hero Section Container & Background Atmosférico Contínuo
+   -------------------------------------------------------------------------- */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  /* Espaçamento vertical que garante que a Hero comece claramente ABAIXO do Header */
+  padding-top: calc(var(--header-height-desktop, 82px) + 38px);
+  padding-bottom: clamp(48px, 6vw, 76px);
+  background-color: var(--color-bg-base, #060919);
+  background-image: 
+    radial-gradient(ellipse 65% 55% at 75% 38%, rgba(112, 69, 245, 0.32) 0%, rgba(30, 27, 75, 0.14) 50%, transparent 80%),
+    radial-gradient(ellipse 42% 35% at 92% 28%, rgba(245, 113, 26, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 50% at 15% 32%, rgba(24, 42, 122, 0.22) 0%, transparent 70%);
+}
+
+/* Efeito Luminoso de Fundo Difuso (Sem caixas ou bordas) */
+.hero-glow-ribbon {
+  position: absolute;
+  top: -5%;
+  right: -5%;
+  width: 60vw;
+  max-width: 850px;
+  height: 95%;
+  background: 
+    radial-gradient(ellipse 60% 50% at 65% 45%, rgba(139, 92, 246, 0.35) 0%, rgba(88, 28, 135, 0.12) 55%, transparent 75%),
+    radial-gradient(ellipse 35% 25% at 82% 32%, rgba(245, 113, 26, 0.18) 0%, transparent 60%),
+    linear-gradient(135deg, transparent 40%, rgba(139, 92, 246, 0.18) 55%, rgba(245, 113, 26, 0.12) 65%, transparent 78%);
+  filter: blur(48px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-container {
+  position: relative;
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(16px, 3.5vw, 32px);
+  padding-right: clamp(16px, 3.5vw, 32px);
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Linha Principal da Hero (2 Colunas Desktop)
+   -------------------------------------------------------------------------- */
+.hero-main-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 1.18fr);
+  align-items: center;
+  gap: clamp(24px, 4vw, 48px);
+}
+
+/* --------------------------------------------------------------------------
+   Coluna da Esquerda: Textos, Títulos e CTAs
+   -------------------------------------------------------------------------- */
+.hero-content {
+  max-width: 530px;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+/* Kicker / Tag Superior ("— AGÊNCIA DIGITAL") — Estritamente abaixo do Header */
+.hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.kicker-line {
+  width: 22px;
+  height: 2.5px;
+  background-color: var(--color-orange, #f5711a);
+  border-radius: 9999px;
+  flex-shrink: 0;
+}
+
+.kicker-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #cbd5e1;
+}
+
+/* Título Principal (H1) */
+.hero-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(2.35rem, 4.3vw, 3.65rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 22px;
+}
+
+/* Destaque em Roxo/Violeta Luminoso ("geram resultados") */
+.hero-title-highlight {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7045f5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #8b5cf6; /* Fallback */
+  display: inline;
+}
+
+/* Parágrafo de Apoio / Descrição */
+.hero-description {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(0.96rem, 1.15vw, 1.05rem);
+  font-weight: 400;
+  line-height: 1.62;
+  color: #94a3b8;
+  max-width: 480px;
+  margin-top: 0;
+  margin-bottom: 34px;
+}
+
+/* --------------------------------------------------------------------------
+   Botões de Ação da Hero
+   -------------------------------------------------------------------------- */
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Botão Primário Laranja ("Solicitar proposta >") */
+.btn-hero-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--color-orange, #f5711a);
+  color: #ffffff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14.5px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 13.5px 28px;
+  border-radius: 9999px;
+  box-shadow: 0 4px 18px rgba(245, 113, 26, 0.35);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.btn-hero-primary:hover,
+.btn-hero-primary:focus-visible {
+  background-color: #ea580c;
+  box-shadow: 0 6px 24px rgba(245, 113, 26, 0.45);
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+/* Botão Secundário Contornado ("Conhecer nossos serviços >") */
+.btn-hero-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: transparent;
+  color: #ffffff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14.5px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 12.5px 26px;
+  border-radius: 9999px;
+  border: 1.5px solid rgba(139, 92, 246, 0.42);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.btn-hero-secondary:hover,
+.btn-hero-secondary:focus-visible {
+  background-color: rgba(139, 92, 246, 0.14);
+  border-color: rgba(139, 92, 246, 0.85);
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+/* Micro-interação da Seta nos Botões */
+.btn-arrow-icon {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.btn-hero-primary:hover .btn-arrow-icon,
+.btn-hero-secondary:hover .btn-arrow-icon {
+  transform: translateX(3px);
+}
+
+/* --------------------------------------------------------------------------
+   Coluna da Direita: Mockup 3D Laptop + Smartphone (Fundo 100% Transparente)
+   -------------------------------------------------------------------------- */
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  z-index: 1;
+}
+
+.hero-visual-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 660px;
+  background: transparent;
+}
+
+/* A imagem é um PNG/WebP 100% transparente em alta resolução (1246x735).
+   O drop-shadow contorna a silhueta física do notebook e do smartphone,
+   integrando perfeitamente os dispositivos ao background contínuo sem retângulos. */
+.hero-devices-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: transparent;
+  filter: drop-shadow(0 24px 44px rgba(0, 0, 0, 0.6)) drop-shadow(0 8px 24px rgba(112, 69, 245, 0.16));
+}
+
+/* --------------------------------------------------------------------------
+   Barra de Diferenciais / Trust Bar Inferior
+   -------------------------------------------------------------------------- */
+.hero-trust-bar {
+  margin-top: clamp(38px, 5vw, 56px);
+  background: rgba(11, 16, 42, 0.65);
+  border: 1px solid rgba(139, 92, 246, 0.22);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 18px clamp(20px, 3vw, 36px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+}
+
+/* Círculo com Glow Neon do Ícone */
+.trust-icon-box {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #2e1d6b 0%, #15133c 100%);
+  border: 1px solid rgba(139, 92, 246, 0.38);
+  box-shadow: 0 0 18px rgba(112, 69, 245, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.trust-icon {
+  width: 22px;
+  height: 22px;
+  color: #ffffff;
+}
+
+.trust-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.trust-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+.trust-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12.5px;
+  font-weight: 400;
+  color: #94a3b8;
+  line-height: 1.3;
+}
+
+/* Divisores Verticais Sutis */
+.trust-divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.09);
+  margin-left: clamp(12px, 2vw, 24px);
+  margin-right: clamp(12px, 2vw, 24px);
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Responsividade da Hero Section
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .hero-section {
+    padding-top: calc(var(--header-height-tablet, 74px) + 28px);
+  }
+
+  .hero-main-row {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 36px;
+  }
+
+  .hero-content {
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+  }
+
+  .hero-kicker {
+    justify-content: center;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    margin-top: 10px;
+  }
+
+  .hero-trust-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+    padding: 22px 24px;
+  }
+
+  .trust-divider {
+    display: none;
+  }
+
+  .trust-item {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero-section {
+    padding-top: calc(var(--header-height-mobile, 68px) + 20px);
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 8.5vw, 2.5rem);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-hero-primary,
+  .btn-hero-secondary {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .hero-trust-bar {
+    border-radius: 14px;
+    padding: 18px 16px;
+  }
+
+  .trust-title {
+    font-size: 13px;
+  }
+
+  .trust-subtitle {
+    font-size: 12px;
+  }
+}

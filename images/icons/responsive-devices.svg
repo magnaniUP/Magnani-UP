@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" fill="none" stroke="#ffffff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Main browser / desktop screen -->
+  <rect x="3" y="4" width="22" height="17" rx="3" stroke="#ffffff" stroke-width="1.9"/>
+  <!-- Top browser bar line -->
+  <line x1="3" y1="9.5" x2="25" y2="9.5" stroke="#ffffff" stroke-width="1.5" opacity="0.7"/>
+  <!-- Mini phone / sub-window on lower right -->
+  <rect x="15" y="12" width="7" height="9" rx="1.5" fill="#1e295d" stroke="#a78bfa" stroke-width="1.6"/>
+  <circle cx="18.5" cy="19.2" r="0.6" fill="#ffffff" stroke="none"/>
+</svg>

@@ -1,0 +1,354 @@
+/**
+ * Magnani UP® — Hero Section Styles (css/hero.css)
+ * Reprodução Visual Absoluta ao Mockup Magnani UP®
+ * 
+ * Correções Específicas:
+ * 1. Imagem de dispositivos em alta resolução, ultra nítida e proporcional
+ * 2. Background da imagem 100% transparente integrado ao background contínuo da página
+ * 3. "AGÊNCIA DIGITAL" posicionado confortavelmente abaixo do Header (sem invasão do menu)
+ */
+
+/* ==========================================================================
+   Hero Section Container & Background Atmosférico Contínuo
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  /* Espaçamento vertical generoso garantindo que "AGÊNCIA DIGITAL" fique claramente abaixo do Header */
+  padding-top: calc(var(--header-height-desktop, 82px) + 54px);
+  padding-bottom: clamp(24px, 3.5vw, 44px);
+  background-color: var(--color-bg-base, #060919);
+  background-image: 
+    radial-gradient(ellipse 65% 55% at 75% 38%, rgba(112, 69, 245, 0.32) 0%, rgba(30, 27, 75, 0.14) 50%, transparent 80%),
+    radial-gradient(ellipse 42% 35% at 92% 28%, rgba(245, 113, 26, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 50% at 15% 32%, rgba(24, 42, 122, 0.22) 0%, transparent 70%);
+}
+
+/* Efeito Luminoso de Fundo Difuso */
+.hero-glow-ribbon {
+  position: absolute;
+  top: -5%;
+  right: -5%;
+  width: 60vw;
+  max-width: 850px;
+  height: 95%;
+  background: 
+    radial-gradient(ellipse 60% 50% at 65% 45%, rgba(139, 92, 246, 0.35) 0%, rgba(88, 28, 135, 0.12) 55%, transparent 75%),
+    radial-gradient(ellipse 35% 25% at 82% 32%, rgba(245, 113, 26, 0.18) 0%, transparent 60%),
+    linear-gradient(135deg, transparent 40%, rgba(139, 92, 246, 0.18) 55%, rgba(245, 113, 26, 0.12) 65%, transparent 78%);
+  filter: blur(48px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-container {
+  position: relative;
+  width: 100%;
+  max-width: var(--container-max-width, 1280px);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding-desktop, 40px);
+  padding-right: var(--container-padding-desktop, 40px);
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   Grid Principal da Hero (2 Colunas Desktop)
+   ========================================================================== */
+.hero-main-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: clamp(28px, 4.5vw, 56px);
+}
+
+/* ==========================================================================
+   Coluna da Esquerda: Textos, Títulos e Botões de Conversão
+   ========================================================================== */
+.hero-content {
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+/* Kicker / Tag Superior ("— AGÊNCIA DIGITAL") */
+.hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 0;
+  margin-bottom: 22px;
+}
+
+.kicker-line {
+  width: 22px;
+  height: 2.5px;
+  background-color: var(--color-accent-orange, #f5711a);
+  border-radius: 9999px;
+  flex-shrink: 0;
+}
+
+.kicker-text {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.8125rem; /* 13px */
+  font-weight: var(--font-weight-extrabold, 800);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-accent-orange, #f5711a);
+}
+
+/* Título Principal (H1) */
+.hero-title {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(2.4rem, 4.4vw, 3.85rem);
+  font-weight: var(--font-weight-extrabold, 800);
+  line-height: 1.12;
+  color: var(--color-text-primary, #ffffff);
+  letter-spacing: -0.035em;
+  margin: 0 0 22px 0;
+}
+
+.hero-title-highlight {
+  color: var(--color-accent-purple, #8b5cf6);
+  background: linear-gradient(135deg, #b499ff 0%, #8b5cf6 55%, #7045f5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+}
+
+/* Parágrafo de Apoio */
+.hero-description {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(1rem, 1.15vw, 1.125rem);
+  font-weight: var(--font-weight-regular, 400);
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.62;
+  margin: 0 0 34px 0;
+  max-width: 480px;
+}
+
+/* Grupo de Botões CTA */
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Botão Primário Laranja */
+.hero-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #f5711a 0%, #e25e07 100%);
+  color: #ffffff;
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: var(--font-size-btn, 0.9375rem);
+  font-weight: var(--font-weight-semibold, 600);
+  letter-spacing: var(--letter-spacing-btn, -0.01em);
+  padding: 13.5px 28px;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 4px 18px rgba(245, 113, 26, 0.38);
+  transition: transform var(--transition-fast), 
+              box-shadow var(--transition-fast), 
+              filter var(--transition-fast);
+}
+
+.hero-btn-primary:hover {
+  transform: translateY(-1.5px);
+  box-shadow: 0 6px 24px rgba(245, 113, 26, 0.52);
+  filter: brightness(1.04);
+}
+
+.hero-btn-primary:active {
+  transform: translateY(0.5px);
+  box-shadow: 0 2px 10px rgba(245, 113, 26, 0.35);
+}
+
+.hero-btn-arrow {
+  width: 15px;
+  height: 15px;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  transition: transform var(--transition-fast);
+}
+
+.hero-btn-primary:hover .hero-btn-arrow {
+  transform: translateX(2.5px);
+}
+
+/* Botão Secundário Outlined */
+.hero-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  background-color: transparent;
+  color: #ffffff;
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: var(--font-size-btn, 0.9375rem);
+  font-weight: var(--font-weight-medium, 500);
+  letter-spacing: var(--letter-spacing-btn, -0.01em);
+  padding: 12.5px 24px;
+  border-radius: 9999px;
+  border: 1px solid rgba(139, 92, 246, 0.45);
+  text-decoration: none;
+  transition: background-color var(--transition-fast), 
+              border-color var(--transition-fast), 
+              transform var(--transition-fast);
+}
+
+.hero-btn-secondary:hover {
+  background-color: rgba(139, 92, 246, 0.12);
+  border-color: rgba(139, 92, 246, 0.85);
+  transform: translateY(-1.5px);
+}
+
+.hero-btn-secondary:active {
+  transform: translateY(0.5px);
+}
+
+.hero-btn-arrow-secondary {
+  width: 14px;
+  height: 14px;
+  stroke: rgba(255, 255, 255, 0.85);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  transition: transform var(--transition-fast), stroke var(--transition-fast);
+}
+
+.hero-btn-secondary:hover .hero-btn-arrow-secondary {
+  transform: translateX(2px);
+  stroke: #ffffff;
+}
+
+/* ==========================================================================
+   Coluna da Direita: Notebook + Smartphone (100% Transparente & Nítido)
+   ========================================================================== */
+.hero-devices-col {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.hero-devices-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 660px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Imagem dos Dispositivos sem Bounding Box */
+.hero-devices-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: transparent;
+  filter: drop-shadow(0 22px 42px rgba(0, 0, 0, 0.6)) 
+          drop-shadow(0 8px 24px rgba(112, 69, 245, 0.18));
+  user-select: none;
+  pointer-events: none;
+  will-change: transform;
+}
+
+/* Brilho Sutil sob os Dispositivos */
+.hero-devices-glow {
+  position: absolute;
+  bottom: -2%;
+  left: 10%;
+  right: 5%;
+  height: 40%;
+  background: radial-gradient(ellipse 60% 40% at 50% 65%, rgba(112, 69, 245, 0.35) 0%, rgba(24, 42, 122, 0.15) 50%, transparent 80%);
+  filter: blur(28px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ==========================================================================
+   Responsividade: Tablet (<= 1024px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .hero-section {
+    padding-top: calc(var(--header-height-tablet, 74px) + 40px);
+    padding-bottom: 28px;
+  }
+
+  .hero-container {
+    padding-left: var(--container-padding-tablet, 24px);
+    padding-right: var(--container-padding-tablet, 24px);
+  }
+
+  .hero-main-row {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    text-align: left;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-devices-wrapper {
+    max-width: 580px;
+    margin: 0 auto;
+  }
+}
+
+/* ==========================================================================
+   Responsividade: Mobile (<= 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: calc(var(--header-height-mobile, 68px) + 32px);
+    padding-bottom: 20px;
+  }
+
+  .hero-container {
+    padding-left: var(--container-padding-mobile, 20px);
+    padding-right: var(--container-padding-mobile, 20px);
+  }
+
+  .hero-title {
+    font-size: 2.25rem;
+    line-height: 1.15;
+    margin-bottom: 18px;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin-bottom: 28px;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .hero-btn-primary,
+  .hero-btn-secondary {
+    width: 100%;
+    justify-content: center;
+    padding: 13.5px 20px;
+  }
+
+  .hero-devices-wrapper {
+    max-width: 100%;
+    margin-top: 10px;
+  }
+}

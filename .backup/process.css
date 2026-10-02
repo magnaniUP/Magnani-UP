@@ -1,0 +1,297 @@
+/**
+ * Magnani UP® — Seção "Como Trabalhamos" (css/process.css)
+ * Reprodução Visual Fiel ao Mockup Original
+ */
+
+/* ==========================================================================
+   Seção Container "Como Trabalhamos"
+   ========================================================================== */
+.process-section {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  padding-top: clamp(32px, 5vw, 60px);
+  padding-bottom: clamp(64px, 8vw, 104px);
+  padding-left: var(--container-padding-desktop, 40px);
+  padding-right: var(--container-padding-desktop, 40px);
+  box-sizing: border-box;
+}
+
+.process-container {
+  width: 100%;
+  max-width: var(--container-max-width, 1280px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==========================================================================
+   Cabeçalho da Seção (2 Colunas Assimétricas no Desktop)
+   ========================================================================== */
+.process-header-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: clamp(32px, 5vw, 64px);
+  margin-bottom: clamp(48px, 6vw, 68px);
+}
+
+.process-header-left {
+  flex: 1 1 auto;
+  max-width: 620px;
+}
+
+/* Identificador Superior: — COMO TRABALHAMOS */
+.process-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.process-tag-line {
+  width: 22px;
+  height: 2.5px;
+  background-color: var(--color-accent-orange, #f5711a);
+  border-radius: 9999px;
+  flex-shrink: 0;
+}
+
+.process-tag-text {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.8125rem; /* 13px */
+  font-weight: var(--font-weight-extrabold, 800);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-accent-orange, #f5711a);
+}
+
+/* Título H2 da Seção */
+.process-title {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: var(--font-weight-extrabold, 800);
+  line-height: 1.18;
+  color: var(--color-text-primary, #ffffff);
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.process-title-highlight {
+  color: var(--color-accent-purple, #8b5cf6);
+  background: linear-gradient(135deg, #b499ff 0%, #8b5cf6 55%, #7045f5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+}
+
+/* Coluna Direita: Texto Introdutório */
+.process-header-right {
+  flex: 0 1 520px;
+}
+
+.process-intro-text {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(0.9rem, 1.05vw, 1rem);
+  font-weight: var(--font-weight-regular, 400);
+  line-height: 1.62;
+  color: rgba(255, 255, 255, 0.72);
+  margin: 0;
+}
+
+.process-intro-text p {
+  margin: 0 0 12px;
+}
+
+.process-intro-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Fluxo Horizontal das 4 Etapas (Desktop)
+   ========================================================================== */
+.process-flow-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Etapa Individual do Processo */
+.process-step-item {
+  flex: 1 1 0;
+  max-width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+/* Ícone Circular da Etapa */
+.process-icon-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: radial-gradient(
+    circle at 35% 30%, 
+    #303fa8 0%, 
+    #172061 65%, 
+    #0f1648 100%
+  );
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  box-shadow: 
+    0 6px 20px rgba(70, 45, 210, 0.32),
+    inset 0 1px 2px rgba(255, 255, 255, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  transition: transform var(--transition-fast, 0.2s ease),
+              box-shadow var(--transition-fast, 0.2s ease);
+}
+
+.process-step-item:hover .process-icon-badge {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 
+    0 8px 24px rgba(112, 69, 245, 0.45),
+    inset 0 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+.process-svg-icon {
+  width: 25px;
+  height: 25px;
+  display: block;
+}
+
+/* Título da Etapa */
+.process-step-title {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: 1.05rem; /* ~17px */
+  font-weight: var(--font-weight-bold, 700);
+  color: var(--color-text-primary, #ffffff);
+  line-height: 1.3;
+  margin: 0 0 10px 0;
+  letter-spacing: -0.015em;
+}
+
+/* Descrição da Etapa */
+.process-step-desc {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.875rem; /* 14px */
+  font-weight: var(--font-weight-regular, 400);
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ==========================================================================
+   Conectores / Setas Direcionais (Entre as Etapas)
+   ========================================================================== */
+.process-flow-connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px; /* Alinha perfeitamente com a altura do badge de ícone */
+  flex-shrink: 0;
+  padding: 0 12px;
+  color: rgba(255, 255, 255, 0.35);
+  user-select: none;
+  pointer-events: none;
+}
+
+.process-arrow-icon {
+  width: 14px;
+  height: 14px;
+  stroke: rgba(255, 255, 255, 0.38);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+/* ==========================================================================
+   Responsividade: Tablet (<= 992px)
+   ========================================================================== */
+@media (max-width: 992px) {
+  .process-section {
+    padding-left: var(--container-padding-tablet, 24px);
+    padding-right: var(--container-padding-tablet, 24px);
+    padding-top: 32px;
+    padding-bottom: 64px;
+  }
+
+  .process-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .process-header-right {
+    flex: 1 1 auto;
+    max-width: 100%;
+  }
+
+  .process-flow-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 36px 32px;
+  }
+
+  .process-step-item {
+    max-width: 100%;
+  }
+
+  .process-flow-connector {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Responsividade: Smartphone (<= 600px)
+   ========================================================================== */
+@media (max-width: 600px) {
+  .process-section {
+    padding-left: var(--container-padding-mobile, 20px);
+    padding-right: var(--container-padding-mobile, 20px);
+    padding-top: 24px;
+    padding-bottom: 56px;
+  }
+
+  .process-flow-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .process-step-item {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .process-icon-badge {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+  }
+
+  .process-svg-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .process-flow-connector {
+    display: flex;
+    height: 24px;
+    align-self: flex-start;
+    padding-left: 20px;
+    transform: rotate(90deg);
+    margin: -10px 0;
+    opacity: 0.5;
+  }
+}

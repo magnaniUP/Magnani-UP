@@ -1,0 +1,189 @@
+/**
+ * Magnani UP® - Responsive & Mobile Navigation Drawer
+ */
+
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(3, 5, 15, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: var(--z-overlay);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+  pointer-events: none;
+}
+
+.mobile-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-drawer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #070c29;
+  background-image: radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.15) 0%, transparent 60%);
+  border-bottom: 1px solid var(--color-border-subtle);
+  padding: calc(var(--header-height-mobile) + 16px) var(--container-padding-mobile) 32px;
+  z-index: var(--z-drawer);
+  transform: translateY(-100%);
+  transition: transform var(--transition-slow);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.mobile-drawer.open {
+  transform: translateY(0);
+}
+
+.mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  font-size: 1.05rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-nav);
+  border-radius: 10px;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link:focus-visible {
+  color: var(--color-text-primary);
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.mobile-nav-link.active {
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+  background-color: rgba(245, 113, 26, 0.1);
+  border-left: 3px solid var(--color-accent-orange);
+}
+
+.mobile-drawer-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.mobile-drawer-cta .btn-cta {
+  width: 100%;
+  padding: 13px 24px;
+  font-size: 1rem;
+}
+
+/* Seletor de Mercado Mobile */
+.mobile-market-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 8px 0;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.mobile-market-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--color-border-subtle);
+  color: var(--color-text-nav);
+  transition: all var(--transition-fast);
+}
+
+.mobile-market-link.current {
+  background: rgba(245, 113, 26, 0.15);
+  border-color: var(--color-accent-orange);
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* ==========================================================================
+   Breakpoints Responsivos
+   ========================================================================== */
+
+@media (max-width: 1100px) {
+  :root {
+    --container-padding-desktop: 20px;
+    --nav-gap-desktop: 18px;
+  }
+
+  .header-actions {
+    gap: 10px;
+  }
+
+  .header-market-link {
+    padding: 3px 6px;
+    gap: 4px;
+  }
+
+  .btn-cta {
+    padding: 9px 16px;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .site-header {
+    height: var(--header-height-tablet);
+  }
+
+  .site-nav,
+  .header-actions .btn-cta,
+  .header-market-switch {
+    display: none !important;
+  }
+
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .mobile-overlay,
+  .mobile-drawer {
+    display: block;
+  }
+}
+
+@media (max-width: 575px) {
+  .site-header {
+    height: var(--header-height-mobile);
+  }
+
+  .header-container {
+    padding: 0 var(--container-padding-mobile);
+  }
+
+  .brand-logo-content {
+    gap: 8px;
+  }
+
+  .brand-symbol-svg {
+    width: 30px;
+    height: 22px;
+  }
+
+  .brand-name {
+    font-size: 1.15rem;
+  }
+}

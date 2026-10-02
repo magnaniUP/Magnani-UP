@@ -1,0 +1,336 @@
+/**
+ * Magnani UP® — Rodapé Oficial (css/footer.css)
+ * Reprodução Visual Fiel ao Mockup Original
+ */
+
+/* ==========================================================================
+   Container Principal do Footer
+   ========================================================================== */
+.site-footer {
+  position: relative;
+  z-index: 6;
+  width: 100%;
+  background: #030617;
+  border-top: 1px solid rgba(139, 92, 246, 0.18);
+  padding-top: clamp(52px, 6.5vw, 84px);
+  padding-bottom: clamp(32px, 4vw, 44px);
+  box-sizing: border-box;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: var(--container-max-width, 1280px);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding-desktop, 40px);
+  padding-right: var(--container-padding-desktop, 40px);
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Grid Principal do Footer (4 Colunas no Desktop)
+   [ MARCA / DESC ]   [ NAVEGAÇÃO ]   [ SERVIÇOS ]   [ CONTACTO ]
+   ========================================================================== */
+.footer-main-grid {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr 1.3fr 1.6fr;
+  gap: clamp(32px, 4vw, 64px);
+  margin-bottom: clamp(40px, 5vw, 64px);
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   Coluna 1 — Marca
+   -------------------------------------------------------------------------- */
+.footer-brand-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-brand-logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: 6px;
+}
+
+.footer-tagline {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.75rem; /* 12px */
+  font-weight: var(--font-weight-extrabold, 800);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-accent-orange, #f5711a);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.footer-institutional-desc {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.9375rem; /* 15px */
+  font-weight: var(--font-weight-regular, 400);
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 340px;
+  margin: 0 0 24px 0;
+}
+
+/* Redes Sociais com Ícones SVG Nítidos */
+.footer-social-list {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-social-link {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: background var(--transition-fast, 0.25s ease),
+              border-color var(--transition-fast, 0.25s ease),
+              color var(--transition-fast, 0.25s ease),
+              transform var(--transition-fast, 0.25s ease),
+              box-shadow var(--transition-fast, 0.25s ease);
+}
+
+.footer-social-link:hover {
+  background: rgba(139, 92, 246, 0.22);
+  border-color: rgba(167, 139, 250, 0.6);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(112, 69, 245, 0.35);
+}
+
+.footer-social-link:focus-visible {
+  outline: 2px solid var(--color-accent-purple, #8b5cf6);
+  outline-offset: 2px;
+}
+
+.footer-social-svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* --------------------------------------------------------------------------
+   Colunas 2, 3 e 4 — Navegação, Serviços e Contacto
+   -------------------------------------------------------------------------- */
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-col-title {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: 1rem; /* 16px */
+  font-weight: var(--font-weight-bold, 700);
+  color: #ffffff;
+  letter-spacing: -0.015em;
+  margin: 0 0 20px 0;
+}
+
+.footer-links-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-link {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.9375rem; /* 15px */
+  font-weight: var(--font-weight-regular, 400);
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  transition: color var(--transition-fast, 0.2s ease),
+              transform var(--transition-fast, 0.2s ease);
+  display: inline-block;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+.footer-link:focus-visible {
+  outline: 2px solid var(--color-accent-purple, #8b5cf6);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Coluna Contacto */
+.footer-contact-text {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.9375rem;
+  font-weight: var(--font-weight-regular, 400);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0 0 16px 0;
+}
+
+.footer-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--color-accent-orange, #f5711a);
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.95rem;
+  font-weight: var(--font-weight-bold, 700);
+  text-decoration: none;
+  padding: 6px 0;
+  transition: color var(--transition-fast, 0.2s ease),
+              gap var(--transition-fast, 0.2s ease);
+}
+
+.footer-contact-btn:hover {
+  color: #ff9142;
+  gap: 12px;
+}
+
+.footer-contact-btn:focus-visible {
+  outline: 2px solid var(--color-accent-orange, #f5711a);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.footer-btn-arrow {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  transition: transform var(--transition-fast, 0.2s ease);
+}
+
+.footer-contact-btn:hover .footer-btn-arrow {
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   Divisor Inferior & Barra de Copyright / Termos Legais
+   ========================================================================== */
+.footer-bottom-bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  box-sizing: border-box;
+}
+
+.footer-copyright {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.875rem; /* 14px */
+  font-weight: var(--font-weight-regular, 400);
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+.footer-legal-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-legal-link {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.875rem; /* 14px */
+  font-weight: var(--font-weight-regular, 400);
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: color var(--transition-fast, 0.2s ease);
+}
+
+.footer-legal-link:hover {
+  color: #ffffff;
+}
+
+.footer-legal-link:focus-visible {
+  outline: 2px solid var(--color-accent-purple, #8b5cf6);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.footer-legal-divider {
+  width: 1px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  display: inline-block;
+}
+
+/* ==========================================================================
+   Responsividade: Tablet (<= 992px)
+   ========================================================================== */
+@media (max-width: 992px) {
+  .footer-container {
+    padding-left: var(--container-padding-tablet, 24px);
+    padding-right: var(--container-padding-tablet, 24px);
+  }
+
+  .footer-main-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 48px;
+  }
+
+  .footer-brand-col {
+    grid-column: 1 / -1;
+    max-width: 500px;
+  }
+}
+
+/* ==========================================================================
+   Responsividade: Mobile (<= 600px)
+   ========================================================================== */
+@media (max-width: 600px) {
+  .site-footer {
+    padding-top: 44px;
+    padding-bottom: 32px;
+  }
+
+  .footer-container {
+    padding-left: var(--container-padding-mobile, 20px);
+    padding-right: var(--container-padding-mobile, 20px);
+  }
+
+  .footer-main-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    margin-bottom: 36px;
+  }
+
+  .footer-brand-col {
+    grid-column: auto;
+    max-width: 100%;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding-top: 24px;
+  }
+
+  .footer-legal-links {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}
