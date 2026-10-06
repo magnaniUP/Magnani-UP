@@ -40,4 +40,25 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.setAttribute('rel', 'noopener noreferrer');
     }
   }, { capture: true });
+
+  // Torna todo o card de serviço clicável com transição suave
+  document.querySelectorAll('.service-card').forEach((card) => {
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('a')) return; // se clicou direto no link do título ou botão, deixa o navegador navegar
+      const link = card.querySelector('.service-card-btn, .service-card-title-link');
+      if (link && link.href) {
+        window.location.href = link.href;
+      }
+    });
+  });
+
+  // Em ambiente local de desenvolvimento (localhost), ajusta URLs de produção para navegação local
+  if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+    document.querySelectorAll('a[href^="https://www.magnaniup.com/"]').forEach((link) => {
+      const currentHref = link.getAttribute('href');
+      if (currentHref && currentHref.startsWith('https://www.magnaniup.com/')) {
+        link.setAttribute('href', currentHref.replace('https://www.magnaniup.com', ''));
+      }
+    });
+  }
 });
