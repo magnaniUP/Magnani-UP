@@ -89,9 +89,9 @@ def render_page(lang_code, s_info, pt_slug, br_slug, it_slug):
     slug = s_info['slug']
     
     # Hreflang URLs
-    pt_url = f"https://dominio.com/pt/servicos/{pt_slug}/"
-    br_url = f"https://dominio.com/br/servicos/{br_slug}/"
-    it_url = f"https://dominio.com/it/servizi/{it_slug}/"
+    pt_url = f"https://www.magnaniup.com/pt/servicos/{pt_slug}/"
+    br_url = f"https://www.magnaniup.com/br/servicos/{br_slug}/"
+    it_url = f"https://www.magnaniup.com/it/servizi/{it_slug}/"
     current_canonical = pt_url if lang_code == 'pt' else (br_url if lang_code == 'br' else it_url)
     
     # Navigation labels
@@ -145,12 +145,12 @@ def render_page(lang_code, s_info, pt_slug, br_slug, it_slug):
     schema_graph = [
         {
             "@type": "Organization",
-            "@id": "https://dominio.com/#organization",
+            "@id": "https://www.magnaniup.com/#organization",
             "name": "Magnani UP®",
-            "url": "https://dominio.com/",
+            "url": "https://www.magnaniup.com/",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://dominio.com/images/logo/logo.png",
+                "url": "https://www.magnaniup.com/images/logo/logo.png",
                 "width": 113,
                 "height": 27
             },
@@ -188,7 +188,7 @@ def render_page(lang_code, s_info, pt_slug, br_slug, it_slug):
             "description": s_info['meta_desc'],
             "url": current_canonical,
             "provider": {
-                "@id": "https://dominio.com/#organization"
+                "@id": "https://www.magnaniup.com/#organization"
             },
             "areaServed": [d['locale'].split('_')[1]]
         },
@@ -334,7 +334,7 @@ def render_page(lang_code, s_info, pt_slug, br_slug, it_slug):
   <meta property="og:url" content="{current_canonical}">
   <meta property="og:site_name" content="Magnani UP®">
   <meta property="og:locale" content="{d['locale']}">
-  <meta property="og:image" content="https://dominio.com/images/og/og-magnani-up.png">
+  <meta property="og:image" content="https://www.magnaniup.com/images/og/og-magnani-up.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="{s_info['h1']} - Magnani UP®">
@@ -343,7 +343,7 @@ def render_page(lang_code, s_info, pt_slug, br_slug, it_slug):
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{s_info['title']}">
   <meta name="twitter:description" content="{s_info['meta_desc']}">
-  <meta name="twitter:image" content="https://dominio.com/images/og/og-magnani-up.png">
+  <meta name="twitter:image" content="https://www.magnaniup.com/images/og/og-magnani-up.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="../../../images/logo/favicon.svg">

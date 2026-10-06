@@ -43,7 +43,7 @@ CONFIGS = {
         'backup_path': '.backup/pt_index.html',
         'title': 'Criação de Sites e Soluções Digitais em Portugal | Magnani UP®',
         'meta_desc': 'Criação de sites profissionais, SEO, tráfego pago, desenvolvimento de sistemas e soluções digitais para empresas em Portugal.',
-        'canonical': 'https://dominio.com/pt/',
+        'canonical': 'https://www.magnaniup.com/pt/',
         'og_locale': 'pt_PT',
         'og_alt': 'Magnani UP® - Agência Digital e Criação de Sites em Portugal',
         'kicker_text': 'AGÊNCIA DIGITAL &bull; CRIAÇÃO DE SITES E SOLUÇÕES DIGITAIS',
@@ -148,7 +148,7 @@ CONFIGS = {
         'backup_path': '.backup/br_index.html',
         'title': 'Criação de Sites e Soluções Digitais | Magnani UP®',
         'meta_desc': 'Criação de sites profissionais, SEO, tráfego pago, desenvolvimento de sistemas e soluções digitais para empresas no Brasil.',
-        'canonical': 'https://dominio.com/br/',
+        'canonical': 'https://www.magnaniup.com/br/',
         'og_locale': 'pt_BR',
         'og_alt': 'Magnani UP® - Agência Digital e Criação de Sites no Brasil',
         'kicker_text': 'AGÊNCIA DIGITAL &bull; CRIAÇÃO DE SITES E SOLUÇÕES DIGITAIS',
@@ -253,7 +253,7 @@ CONFIGS = {
         'backup_path': '.backup/it_index.html',
         'title': 'Creazione Siti Web e Soluzioni Digitali | Magnani UP®',
         'meta_desc': 'Creazione siti web professionali, SEO, traffico a pagamento, sviluppo di sistemi e soluzioni digitali su misura per aziende.',
-        'canonical': 'https://dominio.com/it/',
+        'canonical': 'https://www.magnaniup.com/it/',
         'og_locale': 'it_IT',
         'og_alt': 'Magnani UP® - Agenzia Digitale e Creazione Siti Web in Italia',
         'kicker_text': 'AGENZIA DIGITALE &bull; CREAZIONE SITI WEB E SOLUZIONI DIGITALI',
@@ -369,12 +369,12 @@ def update_home_file(cfg):
     schema_graph = [
         {
             "@type": "Organization",
-            "@id": "https://dominio.com/#organization",
+            "@id": "https://www.magnaniup.com/#organization",
             "name": "Magnani UP®",
-            "url": "https://dominio.com/",
+            "url": "https://www.magnaniup.com/",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://dominio.com/images/logo/logo.png",
+                "url": "https://www.magnaniup.com/images/logo/logo.png",
                 "width": 113,
                 "height": 27
             },
@@ -392,11 +392,11 @@ def update_home_file(cfg):
         },
         {
             "@type": "WebSite",
-            "@id": "https://dominio.com/#website",
-            "url": "https://dominio.com/",
+            "@id": "https://www.magnaniup.com/#website",
+            "url": "https://www.magnaniup.com/",
             "name": "Magnani UP®",
             "publisher": {
-                "@id": "https://dominio.com/#organization"
+                "@id": "https://www.magnaniup.com/#organization"
             },
             "inLanguage": cfg["lang_code"] if cfg["lang_code"] == 'it' else f"pt-{cfg['lang_code'].upper()}"
         },
@@ -407,11 +407,11 @@ def update_home_file(cfg):
             "name": cfg["title"],
             "description": cfg["meta_desc"],
             "isPartOf": {
-                "@id": "https://dominio.com/#website"
+                "@id": "https://www.magnaniup.com/#website"
             },
             "inLanguage": cfg["lang_code"] if cfg["lang_code"] == 'it' else f"pt-{cfg['lang_code'].upper()}",
             "about": {
-                "@id": "https://dominio.com/#organization"
+                "@id": "https://www.magnaniup.com/#organization"
             }
         },
         {

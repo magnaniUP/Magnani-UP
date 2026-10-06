@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.magnaniup.com/pt/</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.magnaniup.com/pt/"/>
@@ -13,7 +13,7 @@
   </url>
   <url>
     <loc>https://www.magnaniup.com/br/</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.magnaniup.com/pt/"/>
@@ -23,12 +23,162 @@
   </url>
   <url>
     <loc>https://www.magnaniup.com/it/</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.magnaniup.com/pt/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.magnaniup.com/br/"/>
     <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.magnaniup.com/it/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magnaniup.com/pt/"/>
+  </url>
+  <url>
+    <loc>https://www.magnaniup.com/pt/servicos/seo/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.magnaniup.com/pt/servicos/seo/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.magnaniup.com/br/servicos/seo/"/>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.magnaniup.com/it/servizi/seo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magnaniup.com/pt/servicos/seo/"/>
+  </url>
+  <url>
+    <loc>https://www.magnaniup.com/br/servicos/seo/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.magnaniup.com/pt/servicos/seo/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.magnaniup.com/br/servicos/seo/"/>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.magnaniup.com/it/servizi/seo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magnaniup.com/pt/servicos/seo/"/>
+  </url>
+  <url>
+    <loc>https://www.magnaniup.com/it/servizi/seo/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.magnaniup.com/pt/servicos/seo/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.magnaniup.com/br/servicos/seo/"/>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.magnaniup.com/it/servizi/seo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magnaniup.com/pt/servicos/seo/"/>
+  </url>
+  <url>
+    <loc>https://www.magnaniup.com/pt/servicos/criacao-de-sites/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.magnaniup.com/pt/servicos/criacao-de-sites/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.magnaniup.com/br/servicos/criacao-de-sites/"/>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.magnaniup.com/it/servizi/creazione-siti-web/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magnaniup.com/pt/servicos/criacao-de-sites/"/>
+  </url>
+  <url>
+    <loc>https://www.magnaniup.com/br/servicos/criacao-de-sites/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.magnaniup.com/pt/servicos/criacao-de-sites/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.magnaniup.com/br/servicos/criacao-de-sites/"/>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.magnaniup.com/it/servizi/creazione-siti-web/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magnaniup.com/pt/servicos/criacao-de-sites/"/>
+  </url>
+  <url>
+    <loc>https://www.magnaniup.com/it/servizi/creazione-siti-web/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.magnaniup.com/pt/servicos/criacao-de-sites/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.magnaniup.com/br/servicos/criacao-de-sites/"/>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.magnaniup.com/it/servizi/creazione-siti-web/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magnaniup.com/pt/servicos/criacao-de-sites/"/>
+  </url>
+  <url>
+    <loc>https://www.magnaniup.com/pt/servicos/google-meu-negocio/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.magnaniup.com/pt/servicos/google-meu-negocio/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.magnaniup.com/br/servicos/google-meu-negocio/"/>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.magnaniup.com/it/servizi/google-business-profile/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magnaniup.com/pt/servicos/google-meu-negocio/"/>
+  </url>
+  <url>
+    <loc>https://www.magnaniup.com/br/servicos/google-meu-negocio/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.magnaniup.com/pt/servicos/google-meu-negocio/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.magnaniup.com/br/servicos/google-meu-negocio/"/>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.magnaniup.com/it/servizi/google-business-profile/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magnaniup.com/pt/servicos/google-meu-negocio/"/>
+  </url>
+  <url>
+    <loc>https://www.magnaniup.com/it/servizi/google-business-profile/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.magnaniup.com/pt/servicos/google-meu-negocio/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.magnaniup.com/br/servicos/google-meu-negocio/"/>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.magnaniup.com/it/servizi/google-business-profile/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magnaniup.com/pt/servicos/google-meu-negocio/"/>
+  </url>
+  <url>
+    <loc>https://www.magnaniup.com/pt/servicos/trafego-pago/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.magnaniup.com/pt/servicos/trafego-pago/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.magnaniup.com/br/servicos/trafego-pago/"/>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.magnaniup.com/it/servizi/traffico-a-pagamento/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magnaniup.com/pt/servicos/trafego-pago/"/>
+  </url>
+  <url>
+    <loc>https://www.magnaniup.com/br/servicos/trafego-pago/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.magnaniup.com/pt/servicos/trafego-pago/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.magnaniup.com/br/servicos/trafego-pago/"/>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.magnaniup.com/it/servizi/traffico-a-pagamento/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magnaniup.com/pt/servicos/trafego-pago/"/>
+  </url>
+  <url>
+    <loc>https://www.magnaniup.com/it/servizi/traffico-a-pagamento/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.magnaniup.com/pt/servicos/trafego-pago/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.magnaniup.com/br/servicos/trafego-pago/"/>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.magnaniup.com/it/servizi/traffico-a-pagamento/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magnaniup.com/pt/servicos/trafego-pago/"/>
+  </url>
+  <url>
+    <loc>https://www.magnaniup.com/pt/servicos/sistemas/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.magnaniup.com/pt/servicos/sistemas/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.magnaniup.com/br/servicos/sistemas/"/>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.magnaniup.com/it/servizi/sistemi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magnaniup.com/pt/servicos/sistemas/"/>
+  </url>
+  <url>
+    <loc>https://www.magnaniup.com/br/servicos/sistemas/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.magnaniup.com/pt/servicos/sistemas/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.magnaniup.com/br/servicos/sistemas/"/>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.magnaniup.com/it/servizi/sistemi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magnaniup.com/pt/servicos/sistemas/"/>
+  </url>
+  <url>
+    <loc>https://www.magnaniup.com/it/servizi/sistemi/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.magnaniup.com/pt/servicos/sistemas/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.magnaniup.com/br/servicos/sistemas/"/>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.magnaniup.com/it/servizi/sistemi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.magnaniup.com/pt/servicos/sistemas/"/>
   </url>
 </urlset>

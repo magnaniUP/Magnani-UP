@@ -1,0 +1,356 @@
+/**
+ * Magnani UP® — Commercial SEO Landing Page Dedicated Styles (css/seo-landing.css)
+ * Réplica visual ultra-fidelizada do Mockup Oficial Magnani UP®
+ */
+
+:root {
+  --color-bg-seo: #000d2b;
+  --color-brand-orange: #f5711a;
+  --color-brand-orange-hover: #ff7f2e;
+  --color-brand-purple: #8b5cf6;
+  --color-brand-purple-light: #a78bfa;
+  --color-card-border: #1b2b63;
+  --color-card-bg: rgba(4, 14, 51, 0.9);
+}
+
+/* Fundo geral da landing */
+body {
+  background-color: var(--color-bg-seo, #000d2b) !important;
+  color: #ffffff;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+.page-wrapper {
+  background-color: var(--color-bg-seo, #000d2b);
+  min-height: 100vh;
+}
+
+/* Hero Section Base */
+.seo-hero-section {
+  position: relative;
+  background-color: #000d2b;
+  box-sizing: border-box;
+}
+
+/* Highlight "Google." */
+.seo-google-highlight {
+  color: #a78bfa;
+  background: linear-gradient(135deg, #9461fd 0%, #a855f7 50%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Card Flutuante */
+.seo-float-card {
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.seo-float-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
+}
+
+/* Faixa de Benefícios (Mockup Magnani UP®) */
+.seo-benefits-panel {
+  background: linear-gradient(180deg, rgba(4, 16, 56, 0.95) 0%, rgba(2, 10, 38, 0.98) 100%);
+  border: 1px solid rgba(30, 58, 138, 0.45);
+  box-shadow: 0 10px 35px -5px rgba(0, 0, 0, 0.65), 0 0 25px -5px rgba(14, 165, 233, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.seo-benefit-icon-badge {
+  background: radial-gradient(circle at 35% 35%, #00e5ff 0%, #0284c7 65%, #0369a1 100%);
+  box-shadow: 0 0 22px rgba(0, 229, 255, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.seo-benefit-item:hover .seo-benefit-icon-badge {
+  transform: scale(1.06);
+  box-shadow: 0 0 28px rgba(0, 229, 255, 0.65), inset 0 1px 1px rgba(255, 255, 255, 0.7);
+}
+
+/* Seção: Por Que Investir em SEO */
+.seo-why-card {
+  background: linear-gradient(180deg, rgba(4, 14, 48, 0.95) 0%, rgba(2, 9, 32, 0.98) 100%);
+  border: 1px solid rgba(27, 43, 99, 0.8);
+  box-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease, box-shadow 0.28s ease;
+}
+
+.seo-why-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.55);
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.75), 0 0 24px -4px rgba(14, 165, 233, 0.18);
+}
+
+.seo-why-icon-badge {
+  background: radial-gradient(circle at 35% 35%, #00e5ff 0%, #0284c7 65%, #0369a1 100%);
+  box-shadow: 0 0 18px rgba(0, 229, 255, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.45);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.seo-why-card:hover .seo-why-icon-badge {
+  transform: scale(1.08);
+  box-shadow: 0 0 24px rgba(0, 229, 255, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+}
+
+.seo-why-circle-btn {
+  background: linear-gradient(135deg, #ff6b3d 0%, #f55923 100%);
+  box-shadow: 0 3px 12px rgba(245, 113, 26, 0.38);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.seo-why-card:hover .seo-why-circle-btn {
+  transform: translateX(2px) scale(1.05);
+  box-shadow: 0 4px 16px rgba(245, 113, 26, 0.6);
+}
+
+/* Seção: Como Funciona (Processo 4 Etapas Fiel ao Mockup) */
+.seo-how-step-item {
+  position: relative;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.seo-how-step-item:hover {
+  transform: translateY(-3px);
+}
+
+.seo-how-icon-sphere {
+  background: radial-gradient(circle at 35% 30%, #3b82f6 0%, #1d4ed8 52%, #0a1f5c 100%) !important;
+  border: 1.5px solid rgba(147, 197, 253, 0.45) !important;
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.45), 0 0 12px rgba(59, 130, 246, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.4) !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.seo-how-step-item:hover .seo-how-icon-sphere {
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: 0 8px 28px rgba(59, 130, 246, 0.65), 0 0 16px rgba(59, 130, 246, 0.5), inset 0 2px 5px rgba(255, 255, 255, 0.55) !important;
+}
+
+.seo-how-num-pill {
+  background-color: #0c2266 !important;
+  border: 1px solid rgba(37, 99, 235, 0.5) !important;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+}
+
+/* Seção: O Que Você Recebe (Mockup Fiel Magnani UP®) */
+.seo-feature-card {
+  background: linear-gradient(180deg, rgba(3, 18, 56, 0.95) 0%, rgba(1, 11, 38, 0.98) 100%);
+  border: 1px solid rgba(26, 54, 128, 0.85);
+  box-shadow: 0 10px 28px -6px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(56, 189, 248, 0.12);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease, box-shadow 0.28s ease;
+}
+
+.seo-feature-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(56, 189, 248, 0.65);
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.75), 0 0 24px -4px rgba(14, 165, 233, 0.2);
+}
+
+.seo-feature-icon-badge {
+  background: radial-gradient(circle at 35% 35%, #00e5ff 0%, #0284c7 65%, #0369a1 100%);
+  box-shadow: 0 0 18px rgba(0, 229, 255, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.seo-feature-card:hover .seo-feature-icon-badge {
+  transform: scale(1.08);
+  box-shadow: 0 0 24px rgba(0, 229, 255, 0.75), inset 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+/* Seção: CTA Banner Final (Réplica Fiel Mockup Magnani UP®) */
+.seo-cta-banner {
+  background: 
+    linear-gradient(115deg, rgba(30, 58, 138, 0.4) 0%, rgba(37, 99, 235, 0.45) 42%, rgba(29, 78, 216, 0.25) 55%, transparent 75%),
+    radial-gradient(ellipse 80% 90% at 75% 50%, rgba(15, 23, 72, 0.95) 0%, rgba(2, 10, 36, 0.98) 100%);
+  background-color: #020c2e;
+  border: 1.5px solid rgba(37, 99, 235, 0.55);
+  box-shadow: 0 20px 60px -15px rgba(0, 0, 0, 0.8), 0 0 40px -5px rgba(37, 99, 235, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.seo-cta-beam {
+  position: absolute;
+  top: -60%;
+  left: 32%;
+  width: 280px;
+  height: 220%;
+  background: linear-gradient(125deg, transparent 0%, rgba(59, 130, 246, 0.18) 35%, rgba(147, 197, 253, 0.3) 50%, rgba(99, 102, 241, 0.18) 65%, transparent 100%);
+  transform: rotate(25deg);
+  pointer-events: none;
+  filter: blur(2px);
+}
+
+.seo-cta-beam-line {
+  position: absolute;
+  top: -40%;
+  left: 48%;
+  width: 2px;
+  height: 180%;
+  background: linear-gradient(180deg, transparent 0%, rgba(147, 197, 253, 0.6) 50%, transparent 100%);
+  transform: rotate(25deg);
+  pointer-events: none;
+  filter: blur(0.5px);
+}
+
+/* ==========================================================================
+   Header Fixo, Sticky Blur e Menu Mobile Completo (Garantia Absoluta)
+   ========================================================================== */
+.site-header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  height: var(--header-height-desktop, 82px);
+  z-index: 1020 !important;
+  background-color: rgba(6, 9, 25, 0.4);
+  transition: background-color 0.28s ease, backdrop-filter 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.site-header.scrolled {
+  background-color: rgba(4, 13, 43, 0.95) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5) !important;
+}
+
+.site-header.menu-open-header {
+  background-color: rgba(4, 13, 43, 0.98) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.seo-hero-section {
+  padding-top: calc(var(--header-height-desktop, 82px) + 24px) !important;
+}
+
+@media (max-width: 991px) {
+  .site-header {
+    height: var(--header-height-tablet, 74px) !important;
+  }
+  .site-nav,
+  .header-actions .btn-cta,
+  .header-market-switch {
+    display: none !important;
+  }
+  .hamburger-btn {
+    display: flex !important;
+  }
+  .mobile-overlay,
+  .mobile-drawer {
+    display: block !important;
+  }
+  .seo-hero-section {
+    padding-top: calc(var(--header-height-tablet, 74px) + 20px) !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .site-header {
+    height: var(--header-height-mobile, 68px) !important;
+  }
+  .seo-hero-section {
+    padding-top: calc(var(--header-height-mobile, 68px) + 16px) !important;
+  }
+}
+
+.hamburger-btn {
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1025 !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.2s ease;
+}
+
+.hamburger-btn:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.hamburger-box {
+  width: 24px;
+  height: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  pointer-events: none;
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff !important;
+  border-radius: 2px;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.28s ease;
+  transform-origin: center;
+  pointer-events: none;
+}
+
+.hamburger-btn[aria-expanded="true"] .hamburger-line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-btn[aria-expanded="true"] .hamburger-line:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger-btn[aria-expanded="true"] .hamburger-line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.mobile-overlay {
+  display: none;
+  position: fixed !important;
+  inset: 0 !important;
+  background-color: rgba(3, 5, 15, 0.75) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  z-index: 1010 !important;
+  opacity: 0;
+  transition: opacity 0.28s ease !important;
+  pointer-events: none;
+}
+
+.mobile-overlay.active {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+.mobile-drawer {
+  display: none;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  background-color: #070c29 !important;
+  background-image: radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.15) 0%, transparent 60%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  padding: calc(var(--header-height-mobile, 68px) + 20px) 20px 32px !important;
+  z-index: 1015 !important;
+  transform: translateY(-100%) !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6) !important;
+  max-height: 90vh !important;
+  overflow-y: auto !important;
+}
+
+.mobile-drawer.open {
+  transform: translateY(0) !important;
+}
+

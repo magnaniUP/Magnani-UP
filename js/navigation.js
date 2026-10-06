@@ -98,34 +98,34 @@ function getEquivalentUrl(targetMarket, currentPath = window.location.pathname) 
  * Inicializador da navegação e interações do Header
  */
 function initNavigation() {
-  const header = document.getElementById('site-header');
+  const header = document.getElementById('site-header') || document.getElementById('header') || document.querySelector('.site-header');
   const toggleBtn = document.getElementById('hamburger-toggle');
   const drawer = document.getElementById('mobile-drawer');
   const overlay = document.getElementById('mobile-overlay');
 
-  if (!header) return;
+  // Efeito de rolagem suave (blur adesivo e cabeçalho fixo)
+  if (header) {
+    let lastScrollY = window.scrollY;
+    let ticking = false;
 
-  // Efeito de rolagem suave (blur adesivo)
-  let lastScrollY = window.scrollY;
-  let ticking = false;
-
-  function onScroll() {
-    lastScrollY = window.scrollY;
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        if (lastScrollY > 20) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
-        }
-        ticking = false;
-      });
-      ticking = true;
+    function onScroll() {
+      lastScrollY = window.scrollY;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (lastScrollY > 10) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
     }
-  }
 
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
 
   // Menu móvel acessível
   if (toggleBtn && drawer) {
@@ -138,6 +138,7 @@ function initNavigation() {
       drawer.classList.add('open');
       if (overlay) overlay.classList.add('active');
       document.body.classList.add('menu-open');
+      if (header) header.classList.add('menu-open-header');
 
       const firstFocusable = drawer.querySelector('a, button');
       if (firstFocusable) {
@@ -153,10 +154,15 @@ function initNavigation() {
       drawer.classList.remove('open');
       if (overlay) overlay.classList.remove('active');
       document.body.classList.remove('menu-open');
+      if (header) header.classList.remove('menu-open-header');
       toggleBtn.focus();
     }
 
-    function toggleMenu() {
+    function toggleMenu(e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
       if (isMenuOpen) {
         closeMenu();
       } else {

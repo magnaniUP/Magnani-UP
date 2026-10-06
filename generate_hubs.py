@@ -167,9 +167,9 @@ def render_hub(lang_code):
     cfg = HUB_CONFIG[lang_code]
     d = DATA[lang_code]
     
-    pt_url = "https://dominio.com/pt/servicos/"
-    br_url = "https://dominio.com/br/servicos/"
-    it_url = "https://dominio.com/it/servizi/"
+    pt_url = "https://www.magnaniup.com/pt/servicos/"
+    br_url = "https://www.magnaniup.com/br/servicos/"
+    it_url = "https://www.magnaniup.com/it/servizi/"
     canonical = pt_url if lang_code == 'pt' else (br_url if lang_code == 'br' else it_url)
     
     if lang_code == 'pt':
@@ -224,12 +224,12 @@ def render_hub(lang_code):
         "@graph": [
             {
                 "@type": "Organization",
-                "@id": "https://dominio.com/#organization",
+                "@id": "https://www.magnaniup.com/#organization",
                 "name": "Magnani UP®",
-                "url": "https://dominio.com/",
+                "url": "https://www.magnaniup.com/",
                 "logo": {
                     "@type": "ImageObject",
-                    "url": "https://dominio.com/images/logo/logo.png",
+                    "url": "https://www.magnaniup.com/images/logo/logo.png",
                     "width": 113,
                     "height": 27
                 },
@@ -261,7 +261,7 @@ def render_hub(lang_code):
                 "name": cfg['title'],
                 "description": cfg['meta_desc'],
                 "isPartOf": {
-                    "@id": "https://dominio.com/#website"
+                    "@id": "https://www.magnaniup.com/#website"
                 }
             }
         ]
@@ -344,7 +344,7 @@ def render_hub(lang_code):
   <meta property="og:url" content="{canonical}">
   <meta property="og:site_name" content="Magnani UP®">
   <meta property="og:locale" content="{d['locale']}">
-  <meta property="og:image" content="https://dominio.com/images/og/og-magnani-up.png">
+  <meta property="og:image" content="https://www.magnaniup.com/images/og/og-magnani-up.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="{cfg['h1']} - Magnani UP®">
@@ -353,7 +353,7 @@ def render_hub(lang_code):
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{cfg['title']}">
   <meta name="twitter:description" content="{cfg['meta_desc']}">
-  <meta name="twitter:image" content="https://dominio.com/images/og/og-magnani-up.png">
+  <meta name="twitter:image" content="https://www.magnaniup.com/images/og/og-magnani-up.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="../../images/logo/favicon.svg">
