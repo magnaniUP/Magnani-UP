@@ -52,6 +52,39 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Slider interativo de Portfólio no Mobile (Sincronização de Dots e Navegação)
+  const portfolioGrid = document.querySelector('.sites-portfolio-grid');
+  const portfolioDots = document.querySelectorAll('.sites-portfolio-dot');
+  if (portfolioGrid && portfolioDots.length > 0) {
+    const cards = portfolioGrid.querySelectorAll('.sites-portfolio-card');
+    let isClickScrolling = false;
+
+    portfolioGrid.addEventListener('scroll', () => {
+      if (isClickScrolling) return;
+      const scrollLeft = portfolioGrid.scrollLeft;
+      const cardWidth = cards[0]?.offsetWidth || 1;
+      const gap = 16;
+      const activeIndex = Math.min(
+        cards.length - 1,
+        Math.max(0, Math.round(scrollLeft / (cardWidth + gap)))
+      );
+      portfolioDots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === activeIndex);
+      });
+    }, { passive: true });
+
+    portfolioDots.forEach((dot, idx) => {
+      dot.addEventListener('click', () => {
+        isClickScrolling = true;
+        portfolioDots.forEach((d, i) => d.classList.toggle('active', i === idx));
+        if (cards[idx]) {
+          cards[idx].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+          setTimeout(() => { isClickScrolling = false; }, 400);
+        }
+      });
+    });
+  }
+
   // Em ambiente local de desenvolvimento (localhost), ajusta URLs de produção para navegação local
   if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
     document.querySelectorAll('a[href^="https://www.magnaniup.com/"]').forEach((link) => {

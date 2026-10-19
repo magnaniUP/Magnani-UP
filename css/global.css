@@ -18,10 +18,10 @@
   --color-glow-violet: #6b21a8;           /* Violeta de acento */
 
   /* Marca - Laranja Magnani UP® */
-  --color-accent-orange: #f5711a;         /* Laranja vibrante oficial (rgb: 245, 113, 26) */
-  --color-accent-orange-hover: #ff7f2e;   /* Laranja iluminado */
-  --color-accent-orange-active: #e25e07;  /* Laranja pressionado */
-  --color-accent-orange-glow: rgba(245, 113, 26, 0.38);
+  --color-accent-orange: #FB803F;         /* Laranja vibrante oficial (rgb: 251, 128, 63) */
+  --color-accent-orange-hover: #ff9052;   /* Laranja iluminado */
+  --color-accent-orange-active: #e66f2e;  /* Laranja pressionado */
+  --color-accent-orange-glow: rgba(251, 128, 63, 0.38);
 
   /* Marca - Roxo & Violeta Neon */
   --color-accent-purple: #8b5cf6;         /* Roxo do símbolo da logo */

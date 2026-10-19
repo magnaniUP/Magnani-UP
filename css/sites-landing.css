@@ -12,6 +12,8 @@
   --sites-blue-highlight: #6882ff;
   --sites-blue-glow: rgba(59, 102, 245, 0.42);
   --sites-border-blue: rgba(79, 120, 255, 0.55);
+  --sites-accent-orange: #FB803F;
+  --sites-orange-glow: rgba(251, 128, 63, 0.42);
   --sites-text-white: #ffffff;
   --sites-text-muted: #cbd5e1;
 }
@@ -200,23 +202,25 @@ body {
               border-color 0.25s ease;
 }
 
-/* Botão Principal: Fundo azul elétrico e texto branco */
+/* Botão Principal: Fundo laranja vibrante #FB803F e texto branco */
 .sites-hero-btn-primary {
-  background: linear-gradient(135deg, #3b66f5 0%, #4f78ff 100%);
+  background: #FB803F;
+  background: linear-gradient(135deg, #FB803F 0%, #ff9052 100%);
   color: #ffffff;
-  border: 1px solid rgba(115, 138, 255, 0.35);
-  box-shadow: 0 8px 26px rgba(59, 102, 245, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 24px rgba(251, 128, 63, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.28);
 }
 
 .sites-hero-btn-primary:hover {
   transform: translateY(-2px);
-  background: linear-gradient(135deg, #4772ff 0%, #5e84ff 100%);
-  box-shadow: 0 12px 32px rgba(59, 102, 245, 0.58), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, #ff9052 0%, #ffa46f 100%);
+  box-shadow: 0 12px 30px rgba(251, 128, 63, 0.58), inset 0 1px 0 rgba(255, 255, 255, 0.35);
   color: #ffffff;
 }
 
 .sites-hero-btn-primary:active {
   transform: translateY(0);
+  background: #e66f2e;
 }
 
 /* Botão Secundário: Fundo transparente, contorno azul e texto branco */
@@ -291,24 +295,6 @@ body {
   z-index: 0;
 }
 
-/* Pequeno elemento gráfico curvo próximo do canto superior direito da composição */
-.sites-hero-curved-accent {
-  position: absolute;
-  top: 4%;
-  right: 5%;
-  width: 64px;
-  height: 64px;
-  pointer-events: none;
-  z-index: 3;
-  opacity: 0.78;
-}
-
-.sites-hero-curved-accent svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-  filter: drop-shadow(0 0 8px rgba(96, 165, 250, 0.45));
-}
 
 /* Moldura/Wrapper de imagem sem distorção e com proporção reservada contra CLS */
 .sites-hero-figure {
@@ -441,8 +427,7 @@ body {
 
   /* Reduz efeitos decorativos no mobile para leitura e desempenho ideais */
   .sites-hero-bg-lines::before,
-  .sites-hero-diagonal-line,
-  .sites-hero-curved-accent {
+  .sites-hero-diagonal-line {
     display: none;
   }
 
@@ -551,23 +536,29 @@ body {
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 768px) {
   .sites-benefits-container {
     padding: 0 var(--container-padding-mobile, 20px);
   }
 
   .sites-benefits-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 18px 14px;
+    gap: 20px 18px;
   }
 
   .sites-benefits-strip {
-    padding: 22px 0;
+    padding: 24px 0;
+  }
+
+  .sites-benefit-item {
+    align-items: flex-start;
+    gap: 12px;
   }
 
   .sites-benefit-icon-badge {
     width: 38px;
     height: 38px;
+    min-width: 38px;
   }
 
   .sites-benefit-svg {
@@ -575,8 +566,12 @@ body {
     height: 18px;
   }
 
+  .sites-benefit-text {
+    min-width: 0;
+  }
+
   .sites-benefit-title {
-    font-size: 0.84rem;
+    font-size: 0.85rem;
   }
 
   .sites-benefit-desc {
@@ -584,10 +579,83 @@ body {
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 480px) {
+  .sites-benefits-container {
+    padding: 0 16px;
+  }
+
   .sites-benefits-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 12px;
+  }
+
+  .sites-benefits-strip {
+    padding: 20px 0;
+  }
+
+  .sites-benefit-item {
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .sites-benefit-icon-badge {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+  }
+
+  .sites-benefit-svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .sites-benefit-text {
+    min-width: 0;
+  }
+
+  .sites-benefit-title {
+    font-size: 0.8125rem;
+    line-height: 1.25;
+    margin-bottom: 2px;
+  }
+
+  .sites-benefit-desc {
+    font-size: 0.715rem;
+    line-height: 1.3;
+  }
+}
+
+@media (max-width: 360px) {
+  .sites-benefits-container {
+    padding: 0 12px;
+  }
+
+  .sites-benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 8px;
+  }
+
+  .sites-benefit-item {
+    gap: 8px;
+  }
+
+  .sites-benefit-icon-badge {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+  }
+
+  .sites-benefit-svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .sites-benefit-title {
+    font-size: 0.775rem;
+  }
+
+  .sites-benefit-desc {
+    font-size: 0.685rem;
   }
 }
 
@@ -679,10 +747,11 @@ body {
   line-height: 1.2;
   text-decoration: none;
   white-space: nowrap;
-  background: linear-gradient(135deg, #3b66f5 0%, #4f78ff 100%);
+  background: #FB803F;
+  background: linear-gradient(135deg, #FB803F 0%, #ff9052 100%);
   color: #ffffff;
-  border: 1px solid rgba(115, 138, 255, 0.35);
-  box-shadow: 0 8px 26px rgba(59, 102, 245, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 24px rgba(251, 128, 63, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.28);
   cursor: pointer;
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
               box-shadow 0.25s ease,
@@ -691,13 +760,14 @@ body {
 
 .sites-about-btn:hover {
   transform: translateY(-2px);
-  background: linear-gradient(135deg, #4772ff 0%, #5e84ff 100%);
-  box-shadow: 0 12px 32px rgba(59, 102, 245, 0.58), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, #ff9052 0%, #ffa46f 100%);
+  box-shadow: 0 12px 30px rgba(251, 128, 63, 0.58), inset 0 1px 0 rgba(255, 255, 255, 0.35);
   color: #ffffff;
 }
 
 .sites-about-btn:active {
   transform: translateY(0);
+  background: #e66f2e;
 }
 
 .sites-about-btn-arrow {
@@ -1274,6 +1344,13 @@ body {
   border-bottom: 1px solid rgba(27, 43, 99, 0.7);
 }
 
+.sites-portfolio-media-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
 .sites-portfolio-card-img {
   width: 100%;
   height: 100%;
@@ -1361,22 +1438,97 @@ body {
   transform: translateX(4px);
 }
 
+/* Oculta os dots do slider de portfólio no desktop */
+.sites-portfolio-slider-dots {
+  display: none;
+}
+
 /* Responsividade da Seção Portfólio */
-@media (max-width: 1100px) {
+@media (max-width: 1024px) {
   .sites-portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 }
 
-@media (max-width: 820px) {
+@media (max-width: 768px) {
   .sites-portfolio-header {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 16px;
+    margin-bottom: 24px;
   }
 
   .sites-portfolio-intro-text {
     max-width: 100%;
+  }
+
+  /* Slider Horizontal com Snap Scroll no Mobile */
+  .sites-portfolio-grid {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding: 6px var(--container-padding-mobile, 20px) 16px;
+    margin-left: calc(-1 * var(--container-padding-mobile, 20px));
+    margin-right: calc(-1 * var(--container-padding-mobile, 20px));
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .sites-portfolio-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sites-portfolio-card {
+    flex: 0 0 82%;
+    max-width: 320px;
+    min-width: 270px;
+    scroll-snap-align: start;
+    box-sizing: border-box;
+  }
+
+  .sites-portfolio-card-body {
+    padding: 18px 18px 20px;
+  }
+
+  .sites-portfolio-card-title {
+    font-size: 1.05rem;
+  }
+
+  .sites-portfolio-card-desc {
+    font-size: 0.835rem;
+    margin-bottom: 16px;
+  }
+
+  /* Indicador de Navegação (Dots) no Mobile */
+  .sites-portfolio-slider-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .sites-portfolio-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .sites-portfolio-dot.active {
+    width: 22px;
+    border-radius: 9999px;
+    background: #FB803F;
+    box-shadow: 0 0 10px rgba(251, 128, 63, 0.45);
   }
 }
 
@@ -1396,27 +1548,1246 @@ body {
   .sites-portfolio-title {
     font-size: clamp(1.75rem, 7.5vw, 2.2rem);
   }
+}
 
-  .sites-portfolio-grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  .sites-portfolio-card-body {
-    padding: 18px 18px 20px;
-  }
-
-  .sites-portfolio-card-title {
-    font-size: 1.05rem;
-  }
-
-  .sites-portfolio-card-desc {
-    font-size: 0.835rem;
-    margin-bottom: 16px;
+@media (max-width: 360px) {
+  .sites-portfolio-card {
+    flex: 0 0 86%;
+    min-width: 250px;
   }
 }
 
+/* ==========================================================================
+   ETAPA 07 — COMO FUNCIONA (#processo)
+   ========================================================================== */
 
+.sites-process-section {
+  position: relative;
+  background-color: var(--sites-bg-deep, #000b26);
+  border-bottom: 1px solid rgba(40, 68, 148, 0.32);
+  padding: clamp(65px, 8vw, 100px) 0;
+  overflow: hidden;
+}
+
+.sites-process-container {
+  max-width: var(--container-max-width, 1240px);
+  margin: 0 auto;
+  padding: 0 var(--container-padding-desktop, 32px);
+}
+
+.sites-process-layout {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  align-items: flex-start;
+}
+
+/* Coluna Esquerda: Título e Introdução */
+.sites-process-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sites-process-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.sites-process-kicker-line {
+  width: 24px;
+  height: 2px;
+  background-color: var(--sites-blue-bright, #4f78ff);
+  border-radius: 999px;
+  flex-shrink: 0;
+  box-shadow: 0 0 8px rgba(79, 120, 255, 0.6);
+}
+
+.sites-process-kicker-text {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #6088ff;
+  line-height: 1.3;
+}
+
+.sites-process-title {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  color: var(--sites-text-white, #ffffff);
+  margin: 0 0 20px 0;
+}
+
+.sites-process-intro-text {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(0.925rem, 1.05vw, 1.02rem);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--sites-text-muted, #94a3b8);
+  margin: 0;
+  max-width: 440px;
+}
+
+/* Coluna Direita: As 4 Etapas em Lista Ordenada */
+.sites-process-flow {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sites-process-step-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.sites-process-badge-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.sites-process-icon-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #2348b3 0%, #132a75 60%, #0c1a47 100%);
+  border: 1px solid rgba(79, 120, 255, 0.45);
+  box-shadow: 0 0 16px rgba(37, 99, 235, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #ffffff;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sites-process-step-item:hover .sites-process-icon-badge {
+  transform: scale(1.08);
+  box-shadow: 0 0 22px rgba(59, 130, 246, 0.55), inset 0 1px 1px rgba(255, 255, 255, 0.4);
+}
+
+.sites-process-svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.sites-process-connector {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(96, 136, 255, 0.4);
+  padding: 0 8px;
+}
+
+.sites-process-connector-svg {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+
+.sites-process-step-num {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #6088ff;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+  line-height: 1;
+}
+
+.sites-process-step-title {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.sites-process-step-desc {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.835rem;
+  font-weight: 400;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.5;
+  padding-right: 12px;
+}
+
+/* Responsividade de Como Funciona */
+@media (max-width: 1100px) {
+  .sites-process-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .sites-process-intro-text {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .sites-process-flow {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 24px;
+  }
+
+  .sites-process-connector {
+    display: none;
+  }
+
+  .sites-process-badge-row {
+    margin-bottom: 14px;
+  }
+
+  .sites-process-step-desc {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .sites-process-section {
+    padding: 48px 0;
+  }
+
+  .sites-process-container {
+    padding: 0 var(--container-padding-mobile, 20px);
+  }
+
+  .sites-process-kicker {
+    margin-bottom: 12px;
+  }
+
+  .sites-process-title {
+    font-size: clamp(1.75rem, 7.5vw, 2.2rem);
+  }
+
+  .sites-process-flow {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .sites-process-step-item {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    column-gap: 16px;
+    align-items: flex-start;
+  }
+
+  .sites-process-badge-row {
+    margin-bottom: 0;
+    grid-row: 1 / 4;
+  }
+
+  .sites-process-step-num {
+    margin-top: 2px;
+    margin-bottom: 4px;
+  }
+
+  .sites-process-step-title {
+    margin-bottom: 6px;
+    font-size: 1.02rem;
+  }
+
+  .sites-process-step-desc {
+    font-size: 0.825rem;
+  }
+}
+
+/* ==========================================================================
+   ETAPA 08 — DIFERENCIAIS / PORQUÊ A MAGNANI UP (#diferenciais)
+   ========================================================================== */
+
+.sites-why-section {
+  position: relative;
+  background-color: var(--sites-bg-deep, #000b26);
+  border-bottom: 1px solid rgba(40, 68, 148, 0.32);
+  padding: clamp(65px, 8vw, 100px) 0;
+  overflow: hidden;
+}
+
+.sites-why-container {
+  max-width: var(--container-max-width, 1240px);
+  margin: 0 auto;
+  padding: 0 var(--container-padding-desktop, 32px);
+}
+
+.sites-why-layout {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  align-items: center;
+}
+
+/* Coluna Esquerda: Conteúdo Institucional & Botão */
+.sites-why-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sites-why-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.sites-why-kicker-line {
+  width: 24px;
+  height: 2px;
+  background-color: var(--sites-blue-bright, #4f78ff);
+  border-radius: 999px;
+  flex-shrink: 0;
+  box-shadow: 0 0 8px rgba(79, 120, 255, 0.6);
+}
+
+.sites-why-kicker-text {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #6088ff;
+  line-height: 1.3;
+}
+
+.sites-why-title {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  color: var(--sites-text-white, #ffffff);
+  margin: 0 0 20px 0;
+}
+
+.sites-why-intro-text {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(0.925rem, 1.05vw, 1.02rem);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--sites-text-muted, #94a3b8);
+  margin: 0 0 32px 0;
+  max-width: 480px;
+}
+
+.sites-why-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 30px;
+  border-radius: 9999px;
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  background: #FB803F;
+  background: linear-gradient(135deg, #FB803F 0%, #ff9052 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 24px rgba(251, 128, 63, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.28);
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s ease,
+              background 0.25s ease;
+}
+
+.sites-why-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #ff9052 0%, #ffa46f 100%);
+  box-shadow: 0 12px 30px rgba(251, 128, 63, 0.58), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+}
+
+.sites-why-btn:active {
+  transform: translateY(0);
+  background: #e66f2e;
+}
+
+.sites-why-btn-arrow {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.sites-why-btn:hover .sites-why-btn-arrow {
+  transform: translateX(4px);
+}
+
+/* Coluna Direita: Grelha 2x2 com os 4 Diferenciais */
+.sites-why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(1rem, 1.8vw, 1.5rem);
+}
+
+.sites-why-card {
+  background: linear-gradient(180deg, rgba(3, 16, 52, 0.95) 0%, rgba(1, 10, 36, 0.98) 100%);
+  border: 1px solid rgba(27, 43, 99, 0.85);
+  border-radius: 16px;
+  padding: 24px 22px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.sites-why-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(79, 120, 255, 0.6);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.55), 0 0 20px rgba(59, 102, 245, 0.16);
+}
+
+.sites-why-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #2348b3 0%, #132a75 60%, #0c1a47 100%);
+  border: 1px solid rgba(79, 120, 255, 0.45);
+  box-shadow: 0 0 16px rgba(37, 99, 235, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #ffffff;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sites-why-card:hover .sites-why-badge {
+  transform: scale(1.08);
+  box-shadow: 0 0 22px rgba(59, 130, 246, 0.55), inset 0 1px 1px rgba(255, 255, 255, 0.4);
+}
+
+.sites-why-svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.sites-why-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sites-why-card-title {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.sites-why-card-desc {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.835rem;
+  font-weight: 400;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Responsividade da Seção Diferenciais */
+@media (max-width: 1100px) {
+  .sites-why-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .sites-why-intro-text {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .sites-why-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 575px) {
+  .sites-why-section {
+    padding: 48px 0;
+  }
+
+  .sites-why-container {
+    padding: 0 var(--container-padding-mobile, 20px);
+  }
+
+  .sites-why-kicker {
+    margin-bottom: 12px;
+  }
+
+  .sites-why-title {
+    font-size: clamp(1.75rem, 7.5vw, 2.2rem);
+  }
+
+  .sites-why-intro-text {
+    margin-bottom: 24px;
+  }
+
+  .sites-why-card {
+    padding: 20px 18px;
+    gap: 14px;
+  }
+
+  .sites-why-badge {
+    width: 44px;
+    height: 44px;
+  }
+
+  .sites-why-svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .sites-why-card-title {
+    font-size: 1rem;
+  }
+
+  .sites-why-card-desc {
+    font-size: 0.825rem;
+  }
+}
+
+/* ==========================================================================
+   ETAPA 09 — SECÇÃO FAQ / PERGUNTAS FREQUENTES (#faq)
+   ========================================================================== */
+
+.sites-faq-section.faq-section {
+  position: relative;
+  background-color: var(--sites-bg-deep, #000b26);
+  border-bottom: 1px solid rgba(40, 68, 148, 0.32);
+  padding: clamp(65px, 8vw, 100px) 0;
+  overflow: hidden;
+}
+
+.sites-faq-container.faq-container {
+  max-width: var(--container-max-width, 1240px);
+  margin: 0 auto;
+  padding: 0 var(--container-padding-desktop, 32px);
+  box-sizing: border-box;
+}
+
+/* Cabeçalho da FAQ (2 Colunas Alinhadas com o Padrão do Mockup) */
+.sites-faq-header.faq-header-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: clamp(2rem, 4vw, 4rem);
+  margin-bottom: clamp(36px, 5vw, 48px);
+}
+
+.sites-faq-header-left.faq-header-left {
+  flex: 1 1 auto;
+  max-width: 620px;
+}
+
+.sites-faq-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.sites-faq-kicker-line {
+  width: 24px;
+  height: 2px;
+  background-color: var(--sites-blue-bright, #4f78ff);
+  border-radius: 999px;
+  flex-shrink: 0;
+  box-shadow: 0 0 8px rgba(79, 120, 255, 0.6);
+}
+
+.sites-faq-kicker-text {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #6088ff;
+  line-height: 1.3;
+}
+
+.sites-faq-title.faq-title {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  color: var(--sites-text-white, #ffffff);
+  margin: 0;
+}
+
+.sites-faq-header-right.faq-header-right {
+  flex: 0 1 440px;
+}
+
+.sites-faq-intro-text.faq-intro-text {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(0.925rem, 1.05vw, 1.02rem);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--sites-text-muted, #94a3b8);
+  margin: 0;
+}
+
+/* Lista Acordeão / Pílulas Horizontais */
+.sites-faq-list.faq-accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Item Acordeão */
+.sites-faq-item.faq-item {
+  background: linear-gradient(180deg, rgba(3, 16, 52, 0.95) 0%, rgba(1, 10, 36, 0.98) 100%);
+  border: 1px solid rgba(27, 43, 99, 0.85);
+  border-radius: 9999px;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: border-color 0.25s ease,
+              box-shadow 0.25s ease,
+              background 0.25s ease,
+              border-radius 0.25s ease;
+}
+
+.sites-faq-item.faq-item:hover {
+  border-color: rgba(79, 120, 255, 0.55);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45), 0 0 16px rgba(59, 102, 245, 0.15);
+}
+
+.sites-faq-item.faq-item.is-open {
+  border-radius: 20px;
+  border-color: rgba(79, 120, 255, 0.7);
+  background: linear-gradient(180deg, rgba(4, 20, 64, 0.98) 0%, rgba(2, 12, 42, 0.99) 100%);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 24px rgba(59, 102, 245, 0.2);
+}
+
+/* Botão de Controle da Pergunta */
+.sites-faq-btn.faq-question-btn {
+  width: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: left;
+  font-family: inherit;
+  color: inherit;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.sites-faq-btn.faq-question-btn:focus-visible {
+  outline: 2px solid #4f78ff;
+  outline-offset: -2px;
+  border-radius: 9999px;
+}
+
+.sites-faq-item.is-open .sites-faq-btn.faq-question-btn:focus-visible {
+  border-radius: 20px 20px 0 0;
+}
+
+.sites-faq-btn-left.faq-question-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex: 1 1 auto;
+}
+
+/* Badge Numérico Circular (01, 02, etc.) */
+.sites-faq-badge.faq-num-badge {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: radial-gradient(circle at 35% 35%, #2348b3 0%, #132a75 60%, #0c1a47 100%);
+  border: 1px solid rgba(79, 120, 255, 0.5);
+  box-shadow: 0 0 12px rgba(37, 99, 235, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.sites-faq-item:hover .sites-faq-badge.faq-num-badge,
+.sites-faq-item.is-open .sites-faq-badge.faq-num-badge {
+  transform: scale(1.06);
+  box-shadow: 0 0 18px rgba(59, 130, 246, 0.55), inset 0 1px 1px rgba(255, 255, 255, 0.4);
+  border-color: rgba(96, 165, 250, 0.8);
+}
+
+/* Texto da Pergunta */
+.sites-faq-question.faq-question-text {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.35;
+  margin: 0;
+  letter-spacing: -0.01em;
+  transition: color 0.2s ease;
+}
+
+/* Ícone de Expansão (+) */
+.sites-faq-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8bb3ff;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.25s ease;
+}
+
+.sites-faq-icon svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.sites-faq-item.is-open .sites-faq-icon {
+  transform: rotate(45deg);
+  color: #ffffff;
+}
+
+/* Painel de Resposta com Animação Fluida (CSS Grid sem saltos no layout) */
+.sites-faq-panel.faq-answer-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+}
+
+.sites-faq-item.is-open .sites-faq-panel.faq-answer-panel {
+  grid-template-rows: 1fr;
+}
+
+.sites-faq-panel-inner.faq-answer-inner {
+  overflow: hidden;
+}
+
+.sites-faq-panel-content.faq-answer-content {
+  padding: 0 28px 24px calc(28px + 34px + 18px);
+  border-top: 1px solid rgba(40, 68, 148, 0.35);
+  margin-top: 4px;
+  padding-top: 18px;
+  box-sizing: border-box;
+}
+
+.sites-faq-answer.faq-answer-text {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.925rem;
+  font-weight: 400;
+  line-height: 1.65;
+  color: #94a3b8;
+  margin: 0;
+}
+
+/* Responsividade da FAQ */
+@media (max-width: 992px) {
+  .sites-faq-header.faq-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .sites-faq-header-left.faq-header-left {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .sites-faq-header-right.faq-header-right {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .sites-faq-btn.faq-question-btn {
+    padding: 15px 22px;
+  }
+
+  .sites-faq-panel-content.faq-answer-content {
+    padding: 0 22px 20px calc(22px + 34px + 16px);
+    padding-top: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sites-faq-section.faq-section {
+    padding: 48px 0;
+  }
+
+  .sites-faq-container.faq-container {
+    padding: 0 var(--container-padding-mobile, 20px);
+  }
+
+  .sites-faq-header.faq-header-row {
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+
+  .sites-faq-kicker {
+    margin-bottom: 10px;
+  }
+
+  .sites-faq-title.faq-title {
+    font-size: clamp(1.75rem, 7.5vw, 2.2rem);
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .sites-faq-item.faq-item {
+    border-radius: 18px;
+  }
+
+  .sites-faq-item.faq-item.is-open {
+    border-radius: 18px;
+  }
+
+  .sites-faq-btn.faq-question-btn {
+    padding: 14px 16px;
+    gap: 14px;
+  }
+
+  .sites-faq-btn.faq-question-btn:focus-visible {
+    border-radius: 18px;
+  }
+
+  .sites-faq-btn-left.faq-question-left {
+    gap: 12px;
+  }
+
+  .sites-faq-badge.faq-num-badge {
+    width: 30px;
+    height: 30px;
+    font-size: 0.75rem;
+  }
+
+  .sites-faq-question.faq-question-text {
+    font-size: 0.925rem;
+  }
+
+  .sites-faq-panel-content.faq-answer-content {
+    padding: 0 16px 18px 16px;
+    padding-top: 14px;
+  }
+
+  .sites-faq-answer.faq-answer-text {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+}
+
+/* ==========================================================================
+   ETAPA 10 — SECÇÃO DE CONTACTO E FORMULÁRIO CTA (#contato)
+   ========================================================================== */
+
+.sites-contact-section {
+  position: relative;
+  background-color: var(--sites-bg-deep, #000b26);
+  padding: clamp(65px, 8vw, 100px) 0;
+  overflow: hidden;
+}
+
+.sites-contact-container {
+  max-width: var(--container-max-width, 1240px);
+  margin: 0 auto;
+  padding: 0 var(--container-padding-desktop, 32px);
+  box-sizing: border-box;
+}
+
+/* Card Principal de Contacto com Borda Luminosa e Gradiente */
+.sites-contact-card {
+  position: relative;
+  background: linear-gradient(135deg, rgba(2, 14, 48, 0.96) 0%, rgba(1, 9, 32, 0.98) 100%);
+  border: 1px solid rgba(40, 75, 175, 0.55);
+  border-radius: 24px;
+  padding: clamp(36px, 5vw, 56px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55), 0 0 40px rgba(59, 102, 245, 0.12);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Arte Gráfica de Feixes de Energia Futuristas no Fundo do Card */
+.sites-contact-bg-art {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.85;
+}
+
+/* Grelha de 2 Colunas */
+.sites-contact-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(320px, 0.88fr) minmax(0, 1.12fr);
+  gap: clamp(32px, 5vw, 64px);
+  align-items: center;
+}
+
+/* Coluna Esquerda: Informações e Diferenciais de Conversão */
+.sites-contact-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sites-contact-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.sites-contact-kicker-line {
+  width: 24px;
+  height: 2px;
+  background-color: var(--sites-blue-bright, #4f78ff);
+  border-radius: 999px;
+  flex-shrink: 0;
+  box-shadow: 0 0 8px rgba(79, 120, 255, 0.6);
+}
+
+.sites-contact-kicker-text {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #6088ff;
+  line-height: 1.3;
+}
+
+.sites-contact-title {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  color: var(--sites-text-white, #ffffff);
+  margin: 0 0 20px 0;
+}
+
+.sites-contact-desc {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(0.925rem, 1.05vw, 1.02rem);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--sites-text-muted, #94a3b8);
+  margin: 0 0 32px 0;
+  max-width: 480px;
+}
+
+/* Badges de Confiança na Coluna Esquerda */
+.sites-contact-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 22px;
+  align-items: center;
+}
+
+.sites-contact-badge-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.sites-contact-badge-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #2563eb 0%, #1d4ed8 60%, #1e3a8a 100%);
+  border: 1px solid rgba(96, 165, 250, 0.4);
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.sites-contact-badge-icon svg {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+
+.sites-contact-badge-label {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #e2e8f0;
+}
+
+/* Coluna Direita: Chamada de Ação Direta para WhatsApp */
+.sites-contact-action-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.sites-contact-action-card {
+  width: 100%;
+  max-width: 480px;
+  background: rgba(3, 16, 52, 0.85);
+  border: 1px solid rgba(40, 80, 180, 0.55);
+  border-radius: 20px;
+  padding: clamp(32px, 4.5vw, 44px) clamp(24px, 4vw, 36px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(59, 102, 245, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sites-contact-action-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(79, 120, 255, 0.75);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6), 0 0 36px rgba(59, 102, 245, 0.22);
+}
+
+/* Badge de Disponibilidade com Ponto Pulsante */
+.sites-contact-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #34d399;
+  margin-bottom: 20px;
+}
+
+.sites-contact-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #10b981;
+  box-shadow: 0 0 8px #10b981;
+  animation: sitesStatusPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes sitesStatusPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.85);
+  }
+}
+
+.sites-contact-action-title {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(1.25rem, 1.8vw, 1.5rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+.sites-contact-action-desc {
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.55;
+  color: #94a3b8;
+  margin: 0 0 26px 0;
+}
+
+/* Botão de WhatsApp em Destaque */
+.sites-contact-wa-btn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 30px;
+  border-radius: 9999px;
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: 1.02rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  background: linear-gradient(135deg, #25d366 0%, #1da851 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 28px rgba(37, 211, 102, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s ease,
+              background 0.25s ease;
+  box-sizing: border-box;
+}
+
+.sites-contact-wa-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #2ae16e 0%, #1fae54 100%);
+  box-shadow: 0 12px 34px rgba(37, 211, 102, 0.52), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+}
+
+.sites-contact-wa-btn:active {
+  transform: translateY(0);
+}
+
+.sites-contact-wa-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.sites-contact-wa-btn .sites-contact-btn-arrow {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.sites-contact-wa-btn:hover .sites-contact-btn-arrow {
+  transform: translateX(4px);
+}
+
+/* Microcopy de Confiança / Segurança */
+.sites-contact-trust {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 18px;
+  font-family: var(--font-family-base, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.78rem;
+  color: #94a3b8;
+  text-align: center;
+}
+
+.sites-contact-trust-icon {
+  width: 14px;
+  height: 14px;
+  color: #60a5fa;
+  flex-shrink: 0;
+}
+
+/* Responsividade da Secção de Contacto */
+@media (max-width: 1024px) {
+  .sites-contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .sites-contact-desc {
+    max-width: 100%;
+  }
+
+  .sites-contact-card {
+    padding: 36px 28px;
+  }
+
+  .sites-contact-action-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .sites-contact-section {
+    padding: 48px 0;
+  }
+
+  .sites-contact-container {
+    padding: 0 var(--container-padding-mobile, 20px);
+  }
+
+  .sites-contact-card {
+    padding: 28px 18px;
+    border-radius: 20px;
+  }
+
+  .sites-contact-action-card {
+    padding: 24px 16px;
+    border-radius: 16px;
+  }
+
+  .sites-contact-kicker {
+    margin-bottom: 12px;
+  }
+
+  .sites-contact-title {
+    font-size: clamp(1.75rem, 7.5vw, 2.2rem);
+    margin-bottom: 14px;
+  }
+
+  .sites-contact-desc {
+    margin-bottom: 24px;
+  }
+
+  .sites-contact-badges {
+    gap: 12px 18px;
+  }
+
+  .sites-contact-badge-label {
+    font-size: 0.8125rem;
+  }
+
+  .sites-contact-wa-btn {
+    padding: 15px 22px;
+    font-size: 0.95rem;
+  }
+}
 
 
 
